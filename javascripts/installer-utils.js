@@ -98,7 +98,7 @@
       // this check is mainly for forums that have the security option "Confirm password to administration access" enabled
       $.get('/admin/index.forum', function(d) {
         if (!$('#change-font-size', d)[0]) {
-          FAE.log('Error : You have not logged into your <a href="/admin/index.forum">administration panel</a>. Please log in so that you can use the FAE Control Panel. <a href="https://github.com/SethClydesdale/forumactif-edge/wiki/Frequently-Asked-Questions#wiki-wrapper" target="_blank" style="font-weight:normal;"><em>(What is this?)</em></a>', 'color:#E53;font-weight:bold;');
+          FAE.log('Error : You have not logged into your <a href="/admin/index.forum">administration panel</a>. Please log in so that you can use the FAE Control Panel. <a href="https://github.com/adel759/dev-point-edge/wiki/Frequently-Asked-Questions#wiki-wrapper" target="_blank" style="font-weight:normal;"><em>(What is this?)</em></a>', 'color:#E53;font-weight:bold;');
           document.getElementById('fae_options').style.display = 'none';
         }
       });
@@ -174,7 +174,7 @@
 
         // create and insert translation button
         if (!FAE.board_lang) {
-          FAE.board_lang = 'Arabic'; // set the board lang to Arabic if it is undefined
+          FAE.board_lang = 'English'; // set the board lang to English if it is undefined
         }
 
         var opts = document.getElementById('fae_options'),
@@ -328,7 +328,7 @@
   });
 
   // help link
-  $('#fae_cp').append('<div style="margin-top:12px"><a href="https://github.com/SethClydesdale/forumactif-edge/wiki/FAE-Control-Panel-Guide" target="_blank" style="float:right;"><strong>Help!</strong></a><div class="clear"></div></div>');
+  $('#fae_cp').append('<div style="margin-top:12px"><a href="https://github.com/adel759/dev-point-edge/wiki/FAE-Control-Panel-Guide" target="_blank" style="float:right;"><strong>Help!</strong></a><div class="clear"></div></div>');
 
   // extra cp stylesheet
   $('head').append(
