@@ -4,7 +4,6 @@ What is "Dev-Point Edge" ? Dev-Point Edge ( or DP Edge, DPE ) is a new modern an
 
 What does Dev-Point Edge offer ?
 
-- Modern mobile-friendly design.
 - Smart automated control panel that assists you with installation and other tasks.
 - Dynamic theme selector so your members can browse in the color they prefer.
 - Side panels for widgets and quick navigation so your forum has maximum space and accessibility.
@@ -12,33 +11,15 @@ What does Dev-Point Edge offer ?
 - Built in counter for reputation votes.
 - and more...
 
-Dev-Point Edge will constantly evolve because it's open source and managed by the community. That means we'll take feedback, suggestions, and reports from the community -- that's right, **your** voice can shape the future of this project ! If you'd like to install Dev-Point Edge on your Forumotion forum, please see the wiki link below which includes detailed instructions on how to install the theme along with additional information on Dev-Point Edge that's constantly changing.
+Dev-Point Edge will constantly evolve because it's open source and managed by the community. That means we'll take feedback, suggestions, and reports from the community -- that's right, **your** voice can shape the future of this project ! If you'd like to install Dev-Point Edge on your Forumotion forum, please see the link below which includes detailed instructions on how to install the theme along with additional information on Dev-Point Edge that's constantly changing.
 
-- [**How to install Dev-Point Edge**](https://github.com/SethClydesdale/forumactif-edge/wiki/Installing)
+- [**How to install Dev-Point Edge**](https://github.com/adel759/dev-point-edge/wiki/Installing)
 
-Not ready to install yet ? No problem ! Take a look around, check out the FAQ and previews below, or visit [our wiki](https://github.com/SethClydesdale/forumactif-edge/wiki) to learn more about what Dev-Point Edge has to offer !
+Not ready to install yet ? No problem ! Take a look around, check out the FAQ and previews below, or visit some links in the side panel to learn more about what Dev-Point Edge has to offer !
 
 ## FAQ
 
-Do you have any questions or concerns about Dev-Point Edge ? If so, feel free to check out [our FAQ](https://github.com/SethClydesdale/forumactif-edge/wiki/Frequently-Asked-Questions) page or contact us on the [support forum](http://fmdesign.forumotion.com/t700-forumactif-edge-support) ! We're always ready to answer your questions ! :wink:
+Do you have any questions or concerns about Dev-Point Edge ? If so, feel free to check out [our FAQ](https://github.com/adel759/dev-point-edge/wiki/Frequently-Asked-Questions) page or contact us on the [support forum](http://arab-point.lolbb.com/f77-montada) ! We're always ready to answer your questions ! :wink:
 
 ## Preview
-You can find various previews of the theme below. [Click here](http://fmdesign.forumotion.com/forum) if you'd like a live preview of Dev-Point Edge.
-
-**Mobile Preview :** Dev-Point Edge is responsive, so that means it's mobile friendly ! Don't believe it ? Check out Google's [Mobile-Friendly test](https://www.google.com/webmasters/tools/mobile-friendly/?url=fmdesign.forumotion.com%2Fforum) !
-
-![](http://i35.servimg.com/u/f35/18/45/41/65/mobile10.png)
-
-**Feature Preview :** Dev-Point Edge comes with a theme changer that allows your members to browse in the color of their choice, and to give your forum maximum space it docks widgets to a side panel !
-
-![](http://i.imgur.com/rrAWjWL.gif)
-
-## Full Page Screenshots
-
-Click any of the links below to see a full page screen shot of Dev-Point Edge in action.
-
-| Desktop | Mobile |
-| :------ | :----- |
-| [Homepage](http://i35.servimg.com/u/f35/18/21/41/30/screen12.png) | [Homepage (Mobile)](http://i35.servimg.com/u/f35/18/21/41/30/screen13.png) |
-| [Topics](http://i35.servimg.com/u/f35/18/21/41/30/screen11.png) | [Topics (Mobile)](http://i35.servimg.com/u/f35/18/21/41/30/screen10.png) |
-| [Dev-Point Edge Control Panel](http://i35.servimg.com/u/f35/18/21/41/30/screen14.png) | N/A |
+You can find various previews of the theme below. [Click here](http://arab-point.lolbb.com/) if you'd like a live preview of Dev-Point Edge.
