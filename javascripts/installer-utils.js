@@ -3,7 +3,7 @@
     window.FAE = new Object();
   }
 
-  FAE.raw = 'https://raw.githubusercontent.com/SethClydesdale/forumactif-edge/master/';
+  FAE.raw = 'https://raw.githubusercontent.com/adel759/dev-point-edge/master/';
   FAE.eGIF = 'http://illiweb.com/fa/empty.gif';
   FAE.delay = 1000;
   FAE.cp_lang = {};
