@@ -2,11 +2,11 @@
 FAE.step = [
 
   {
-    info : 'Changing forum version to phpbb3',
+    info : 'Changing forum version to phpbb2',
     type : 'POST',
      url : 'part=themes&sub=styles&mode=version&extended_admin=1',
     data : {
-                 tpl : 'prosilver',
+                 tpl : 'subsilver',
           keep_theme : 2,
                 code : 1,
       change_version : 'Save'
@@ -3193,4 +3193,4 @@ FAE.next = function() {
 FAE.error = function() {
   FAE.log('An error was encountered on step ' + FAE.index + ' (' + FAE.step[FAE.index].info + ') of the installation process. Please <a href="http://fmdesign.forumotion.com/t700-forumactif-edge-support#13923" target="_blank">open a new issue</a> and provide this information for further assistance.', 'color:#E53;font-weight:bold;');
   window.setTimeout(FAE.next, 1000);
-};                      
+};

@@ -1,96 +1,104 @@
-<ul id="search-links" class="linklist">
-	<!-- BEGIN switch_user_logged_in -->
-	<li><a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a>&nbsp;&bull;&nbsp;</li>
-	<li><a href="{U_SEARCH_SELF}">{L_SEARCH_SELF}</a>&nbsp;&bull;&nbsp;</li>
-	<!-- END switch_user_logged_in -->
-	<li><a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a></li>
-	<!-- BEGIN switch_user_logged_in -->
-	<li class="right"><a href="{U_MARK_READ}" accesskey="m">{L_MARK_FORUMS_READ}</a></li>
-	<!-- END switch_user_logged_in -->
-</ul>
+<style>
+.link-box img { margin-top: 3px; }
+.link-box a { font-size: 11px; }
+#des_img_box img { display: none; }
+.lastpost-avatar img { border-radius:50%; }
+</style>
+<table class="tborder" align="center" border="0" cellpadding="6" cellspacing="0" width="100%">
+<!-- BEGIN catrow --><!-- BEGIN tablehead -->
+<tbody>
+    <tr>
+        <td class="tcat" colspan="5" style="-webkit-border-radius: 5px;border-radius: 5px; ">
+            <table dir="rtl">
+    <tbody><tr>
+        <td><img alt="" src="http://a7la.honor.es/dev1/images/cat.png"></td>
+        <td><a href="/{catrow.tablehead.ID}-category" colspan="{catrow.tablehead.INC_SPAN}" nowrap="nowrap" width="100%" class="secondarytitle">{catrow.tablehead.L_FORUM}</a></td>
+        <td></td>
+    </tr>
+</tbody></table>
+        </td>
+    </tr>
+</tbody>
 
-<!-- BEGIN catrow -->
-	<!-- BEGIN tablehead -->
-  <div class="forum-category">
-    <noscript>
-      <div class="title">{catrow.tablehead.L_FORUM}</div>
-      <div id="{catrow.tablehead.ID}">
-    </noscript>
-    <script type="text/javascript">(function() {
-      var state = my_getcookie('fae_{catrow.tablehead.ID}') == 'hidden';
-      document.write('<div class="title ' + ( state ? 'c_show' : 'c_hide') + '" onclick="fae_toggle_category(this);">{catrow.tablehead.L_FORUM}</div><div id="{catrow.tablehead.ID}" ' + (state ? 'style="display:none;"' : '') + '>');
-    }());</script>
-	<!-- END tablehead -->
+        <!-- END tablehead -->
+        <!-- BEGIN cathead -->
+<tbody id="collapseobj_forumbit_6" style="">
 
-	  <!-- BEGIN forumrow -->
-    <div class="forum-block color-primary">
-      <div class="forum-block-inner">
-        <div class="forum-status" title="{catrow.forumrow.L_FORUM_FOLDER_ALT}" style="background-image:url('{catrow.forumrow.FORUM_FOLDER_IMG}');">
+        <!-- END cathead -->
+        <!-- BEGIN forumrow -->
+
+
+<tr align="center">
+    <td class="alt2" width="60px;"><img style="border-radius:50%" src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="" id="forum_statusicon_308" border="0"></td>
+    <td class="alt1Active" id="f308" align="right" width="90%">
+        <div>
+            <a href="{catrow.forumrow.U_VIEWFORUM}"><strong><b>{catrow.forumrow.FORUM_NAME}</b></strong></a>
+        <!--	<span class="smallfont">(Ì‘«ÂœÂ 8 “«∆—)</span> -->
         </div>
+        <div id="des_img_box" class="smallfont"><strong>{catrow.forumrow.FORUM_DESC}</strong></div>
 
-        <div class="forum-info">
+        <div class="smallfont" style="margin-top: 6px;"><span class="link-box"><b>
+                                    <ol class="subForumList" id="links_{catrow.forumrow.U_VIEWFORUM}">
+                                            {catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}
+                                    </ol>
+                                </b></span></div>
 
-          <h{catrow.forumrow.LEVEL} class="hierarchy">
-            <a href="{catrow.forumrow.U_VIEWFORUM}" class="forumtitle">{catrow.forumrow.FORUM_NAME}</a>
-          </h{catrow.forumrow.LEVEL}>
-          {catrow.forumrow.FORUM_DESC}
+<script>
+var str = document.getElementById('links_{catrow.forumrow.U_VIEWFORUM}').innerHTML;
+var substr = str.split('>, <');
+document.getElementById('links_{catrow.forumrow.U_VIEWFORUM}').innerHTML = '';
+for (var i = 0; i < substr.length; ++i) {
+check = document.getElementById('links_{catrow.forumrow.U_VIEWFORUM}').innerHTML;
+if (check) {
+document.getElementById('links_{catrow.forumrow.U_VIEWFORUM}').innerHTML += '<li><' + substr[i] + '</li>';
+} else {
+document.getElementById('links_{catrow.forumrow.U_VIEWFORUM}').innerHTML += '<li>' + substr[i] + '</li>';
+};
+};
+</script>
 
-          <!-- BEGIN switch_moderators_links -->
-            {catrow.forumrow.switch_moderators_links.L_MODERATOR}{catrow.forumrow.switch_moderators_links.MODERATORS}
-          <!-- END switch_moderators_links -->
-          {catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}
-          <strong>{forumrow.L_SUBFORUM_STR}</strong> {forumrow.SUBFORUMS}
 
-        </div>
+    </td>
+<td class="alt2" style="font-size: x-small"><div class="forumcounter threadcountbg hint--right" data-hint="«·„Ê«÷Ì⁄"><span class="fa"> ? </span> {catrow.forumrow.TOPICS}
 
-        <div class="forum-stats">
+</div></td>
+<td class="alt2" style="font-size: x-small"><div class="forumcounter replycountbg hint--left" data-hint="«·—œÊœ"><span class="fa"> ? </span> {catrow.forumrow.POSTS} </div></td>
+<td id="lastpost" class="alt2">
+<table width="100%">
+<tbody>
+<tr>
+<td class="alt2">
+<div class="smallfont" align="right">
+<div>
+<span style="white-space:nowrap">
+<img class="inlineimg" src="http://a7la.honor.es/dev1/icons/icon_1.gif" alt="" border="0" /><strong>&nbsp;{catrow.forumrow.LAST_POST}</strong></span>
+</div>
+</div>
+</td>
+<td class="alt2 smallfont" style="white-space:nowrap" align="left">
+<!-- BEGIN avatar -->
+<span class="lastpost-avatar">{catrow.forumrow.avatar.LAST_POST_AVATAR}</span>
+<!-- END avatar -->
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- END forumrow -->
+        <!-- BEGIN catfoot -->
+        <tr>
+                <!-- BEGIN inc -->
+                <td class="{catrow.catfoot.inc.INC_CLASS}" width="46"><img src="{SPACER}" height="0" width="46" /></td>
+                <!-- END inc -->
+                <td class="spaceRow" colspan="{catrow.catfoot.INC_SPAN}" height="1"><img src="{SPACER}" alt="" height="1" width="1" /></td>
+        </tr>
+        <!-- END catfoot -->
+        <!-- BEGIN tablefoot -->
 
-          <div class="topics">
-            <span class="number">{catrow.forumrow.TOPICS}</span><br/>
-            <small>{L_TOPICS}</small>
-          </div>
+</tbody>
 
-          <div class="posts">
-            <span class="number">{catrow.forumrow.POSTS}</span><br/>
-            <small>{L_POSTS}</small>
-          </div>
-
-        </div>
-
-        <div class="forum-lastpost">
-
-          <!-- BEGIN avatar -->
-          <span class="lastpost-avatar">{catrow.forumrow.avatar.LAST_POST_AVATAR}</span>
-          <!-- END avatar -->
-
-          <span>
-            <!-- BEGIN switch_topic_title -->
-            <a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}">{catrow.forumrow.LATEST_TOPIC_NAME}</a><br />
-            <!-- END switch_topic_title -->
-            {catrow.forumrow.USER_LAST_POST}
-          </span>
-
-        </div>
-
-        <div class="clear"></div>
-      </div>
-    </div>
-	  <!-- END forumrow -->
-
-	<!-- BEGIN tablefoot -->
-    <div class="clear"></div>
-    </div>
-  </div>
-	<!-- END tablefoot -->
-<!-- END catrow -->
-
-<!-- BEGIN switch_on_index -->
-<ul id="stat-links" class="linklist">
-	<li><a href="{U_TODAY_ACTIVE}">{L_TODAY_ACTIVE}</a>&nbsp;&bull;&nbsp;</li>
-	<li><a href="{U_TODAY_POSTERS}">{L_TODAY_POSTERS}</a>&nbsp;&bull;&nbsp;</li>
-	<li class="last"><a href="{U_OVERALL_POSTERS}">{L_OVERALL_POSTERS}</a></li>
-	<!-- BEGIN switch_delete_cookies -->
-	<li class="right"><a href="{switch_on_index.switch_delete_cookies.U_DELETE_COOKIES}" rel="nofollow">{switch_on_index.switch_delete_cookies.L_DELETE_COOKIES}</a></li>
-	<!-- END switch_delete_cookies -->
-</ul>
-<!-- END switch_on_index -->
+<img src="{SPACER}" alt="" height="5" width="1" />
+<!-- END tablefoot --><!-- END catrow -->
+</table>
+<br>

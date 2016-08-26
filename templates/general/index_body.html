@@ -1,202 +1,279 @@
 {JAVASCRIPT}
-
-<!-- BEGIN switch_user_login_form_header -->
-<div class="content-block">
-  <div class="title">{L_LOGIN}</div>
-  <div class="txt-content">
-		<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
-			<div class="user_login_form center">
-				<label>{L_USERNAME} : <input class="post" type="text" size="10" name="username" /></label>&nbsp;
-				<label>{L_PASSWORD} : <input class="post" type="password" size="10" name="password" /></label>&nbsp;
-				<label>{L_AUTO_LOGIN} : <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /></label>&nbsp;
-				{S_HIDDEN_FIELDS}<input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" />
-				<!-- BEGIN switch_fb_connect -->
-				<span class="fb_or">{switch_user_login_form_header.switch_fb_connect.L_OR}</span>
-				<fb:login-button size="large" onlogin="window.location='/facebook_connect.forum'" scope="{switch_user_login_form_footer.switch_fb_connect.L_FB_PERMISSIONS}">{switch_user_login_form_footer.switch_fb_connect.L_FB_LOGIN_BUTTON}</fb:login-button>
-				<!-- END switch_fb_connect -->
-			</div>
-		</form>
-  </div>
-</div>
-<!-- END switch_user_login_form_header -->
-
 <!-- BEGIN message_admin_index -->
-	<div class="content-block introduction">
-	<!-- BEGIN message_admin_titre -->
-		<div class="title">{message_admin_index.message_admin_titre.MES_TITRE}</div>
-	<!-- END message_admin_titre -->
-
-	<!-- BEGIN message_admin_txt -->
-		<div class="txt-content">{message_admin_index.message_admin_txt.MES_TXT}</div>
-	<!-- END message_admin_txt -->
-	</div>
+<table class="forumline" width="100%" border="0" cellspacing="1" cellpadding="0">
+    <!-- BEGIN message_admin_titre -->
+    <tr>
+        <td class="catHead" height="28"><span class="cattitle">{message_admin_index.message_admin_titre.MES_TITRE}</span></td>
+    </tr>
+    <!-- END message_admin_titre -->
+    <!-- BEGIN message_admin_txt -->
+    <tr>
+        <td class="row1" rowspan="3" align="center" valign="middle">
+        <div class="gensmall">{message_admin_index.message_admin_txt.MES_TXT}</div>
+        </td>
+    </tr>
+    <!-- END message_admin_txt -->
+</table>
 <!-- END message_admin_index -->
 
+<!-- BEGIN switch_user_login_form_header -->
+<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
+    <!-- BEGIN switch_fb_connect_no -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="user_login_form forumline">
+        <tr>
+            <td class="row1" align="center">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td><span class="genmed">{L_USERNAME}:</span>&nbsp;</td>
+                        <td><input class="post" type="text" size="10" name="username"/>&nbsp;</td>
+                        <td>
+                            <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} />
+                            <span class="gensmall">{L_AUTO_LOGIN}</span>&nbsp;
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="genmed">{L_PASSWORD}:</span>&nbsp;</td>
+                        <td><input class="post" type="password" size="10" name="password"/>&nbsp;</td>
+                        <td>{S_HIDDEN_FIELDS}<input class="mainoption" type="submit" name="login" value="{L_LOGIN}" /></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- END switch_fb_connect_no -->
+
+    <!-- BEGIN switch_fb_connect -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="user_login_form forumline">
+        <tr>
+            <td valign="top" width="100%" class="row1" align="center">
+                <table width="100%">
+                    <tr>
+                        <td width="55%" valign="middle" align="right">
+                            <table class="right">
+                                <tr>
+                                    <td><span class="genmed">{L_USERNAME}:</span>&nbsp;</td>
+                                    <td><input class="post" type="text" size="10" name="username"/>&nbsp;</td>
+                                    <td>
+                                        <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} />
+                                        <span class="gensmall">{L_AUTO_LOGIN}</span>&nbsp;
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="genmed">{L_PASSWORD}:</span>&nbsp;</td>
+                                    <td><input class="post" type="password" size="10" name="password"/>&nbsp;</td>
+                                    <td>{S_HIDDEN_FIELDS}<input class="mainoption" type="submit" name="login" value="{L_LOGIN}" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <span class="genmed fb_or">{switch_user_login_form_header.switch_fb_connect.L_OR}</span>
+                        </td>
+                        <td width="35%" class="align_gauche"><fb:login-button size="large" onlogin="window.location='/facebook_connect.forum'" v="2" scope="{switch_user_login_form_header.switch_fb_connect.L_FB_PERMISSIONS}">{switch_user_login_form_header.switch_fb_connect.L_FB_LOGIN_BUTTON}</fb:login-button></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- END switch_fb_connect -->
+</form>
+<!-- END switch_user_login_form_header -->
 {CHATBOX_TOP}
-<div id="board_time_table">
-  <p id="board_current_time" class="left">{CURRENT_TIME}</p>
-  <!-- BEGIN switch_user_logged_in --><p id="board_last_visit" class="right">{LAST_VISIT_DATE}</p><!-- END switch_user_logged_in -->
-  <div class="clear"></div>
-</div>
 {BOARD_INDEX}
 
-<!-- BEGIN disable_viewonline -->
-<div id="who_is_online">
-
-  <div id="wio_left">
-    <div id="wio_activity" class="content-block">
-      <!-- BEGIN switch_viewonline_link -->
-    	<div class="title"><a href="{U_VIEWONLINE}" rel="nofollow">{L_WHO_IS_ONLINE}</a></div>
-    	<!-- END switch_viewonline_link -->
-
-    	<!-- BEGIN switch_viewonline_nolink -->
-    	<div class="title">{L_WHO_IS_ONLINE}</div>
-    	<!-- END switch_viewonline_nolink -->
-      <div class="txt-content">
-        <img src="{L_ONLINE_IMG}" id="i_whosonline" alt="{L_WHO_IS_ONLINE}" class="img-whois" />
-        {TOTAL_USERS_ONLINE}<br/>
-
-        {LOGGED_IN_USER_LIST}
-
-        {L_ONLINE_USERS}
-        {L_CONNECTED_MEMBERS}<br />
-        {L_WHOSBIRTHDAY_TODAY}{L_WHOSBIRTHDAY_WEEK}
-      </div>
-    </div>
-
-    <div id="wio_group_legend" class="content-block">
-      <div class="title">{LEGEND}</div>
-      <div class="txt-content">
-        <div id="wio_groups">{GROUP_LEGEND}</div>
-      </div>
-      <script type="text/javascript">if (window.wio_formatGroups) { wio_formatGroups(); }</script>
-    </div>
-
-  </div>
-
-  <div id="wio_right">
-    <div id="wio_statistics" class="content-block">
-      <!-- BEGIN switch_statistics_link -->
-    	<div class="title"><a href="{U_STATISTICS}" rel="nofollow">{L_STATISTICS}</a></div>
-    	<!-- END switch_statistics_link -->
-
-    	<!-- BEGIN switch_statistics_nolink -->
-    	<div class="title">{L_STATISTICS}</div>
-    	<!-- END switch_statistics_nolink -->
-
-      <div class="txt-content">
-
-        <div class="wio_row">
-          <div id="wio_newest_user" class="wio_stats">
-            <div id="wio_newest_inner">
-              <div id="wio_new_avatar"><img src="http://illiweb.com/fa/invision/pp-blank-thumb.png" /></div>
-              <div class="wio_value">{NEWEST_USER}</div>
-              <div id="wio_new_date"></div>
-              <div class="clear"></div>
-            </div>
-          </div>
-          <script type="text/javascript">if (window.wio_getNewAvatar) { wio_getNewAvatar(); }</script>
-
-          <div id="wio_total_posts" class="wio_stats"><span class="wio_value">{TOTAL_POSTS}</span></div>
-        </div>
-
-        <div class="wio_row">
-          <div id="wio_total_users" class="wio_stats"><span class="wio_value">{TOTAL_USERS}</span></div>
-          <div id="wio_total_topics" class="wio_stats"><span class="wio_value"><strong>N/A</strong></span></div>
-        </div>
-
-        <div class="wio_row">
-          <div id="wio_record_users" class="wio_stats"><span class="wio_value">{RECORD_USERS}</span></div>
-          <div id="wio_board_age" class="wio_stats"><span class="wio_value"><strong>N/A</strong></span></div>
-        </div>
-
-      </div>
-      <script type="text/javascript">if (window.wio_getStats) { wio_getStats(); }</script>
-    </div>
-
-
-    <!-- BEGIN switch_chatbox_activate -->
-    <div id="wio_chatters" class="content-block">
-      <div class="title"><a href="{S_JOIN_CHAT}" target="ChatBox">{CHATBOX_NAME}</a></div>
-      <div class="txt-content">
-      	{TOTAL_CHATTERS_ONLINE}&nbsp;:&nbsp;
-      	{CHATTERS_LIST}<br />
-    		<!-- BEGIN switch_chatbox_popup -->
-    		<div id="chatbox_popup"></div>
-    		<script type="text/javascript">
-    		insertChatBoxPopup('{disable_viewonline.switch_chatbox_activate.switch_chatbox_popup.U_FRAME_CHATBOX}', '{L_CLICK_TO_JOIN_CHAT}');
-    		</script>
-    		<!-- END switch_chatbox_popup -->
-      </div>
-    </div>
-    <!-- END switch_chatbox_activate -->
-  </div>
-  <div class="clear"></div>
-</div>
-<!-- END disable_viewonline -->
-
-{CHATBOX_BOTTOM}
-
 <!-- BEGIN switch_user_login_form_footer -->
-<div class="content-block">
-  <div class="title">{L_LOGIN}</div>
-  <div class="txt-content">
-		<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
-			<div class="user_login_form center">
-				<label>{L_USERNAME} : <input class="post" type="text" size="10" name="username" /></label>&nbsp;
-				<label>{L_PASSWORD} : <input class="post" type="password" size="10" name="password" /></label>&nbsp;
-				<label>{L_AUTO_LOGIN} : <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} /></label>&nbsp;
-				{S_HIDDEN_FIELDS}<input class="mainoption button1" type="submit" name="login" value="{L_LOGIN}" />
-				<!-- BEGIN switch_fb_connect -->
-				<span class="fb_or">{switch_user_login_form_footer.switch_fb_connect.L_OR}</span>
-				<fb:login-button size="large" onlogin="window.location='/facebook_connect.forum'" scope="{switch_user_login_form_footer.switch_fb_connect.L_FB_PERMISSIONS}">{switch_user_login_form_footer.switch_fb_connect.L_FB_LOGIN_BUTTON}</fb:login-button>
-				<!-- END switch_fb_connect -->
-			</div>
-		</form>
-  </div>
-</div>
+<form action="{S_LOGIN_ACTION}" method="post" name="form_login">
+    <!-- BEGIN switch_fb_connect_no -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="user_login_form forumline">
+        <tr>
+            <td class="row1" align="center">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td><span class="genmed">{L_USERNAME}:</span>&nbsp;</td>
+                        <td><input class="post" type="text" size="10" name="username"/>&nbsp;</td>
+                        <td>
+                            <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} />
+                            <span class="gensmall">{L_AUTO_LOGIN}</span>&nbsp;
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><span class="genmed">{L_PASSWORD}:</span>&nbsp;</td>
+                        <td><input class="post" type="password" size="10" name="password"/>&nbsp;</td>
+                        <td>{S_HIDDEN_FIELDS}<input class="mainoption" type="submit" name="login" value="{L_LOGIN}" /></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- END switch_fb_connect_no -->
+
+    <!-- BEGIN switch_fb_connect -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="user_login_form forumline">
+        <tr>
+            <td valign="top" width="100%" class="row1" align="center">
+                <table width="100%">
+                    <tr>
+                        <td width="55%" valign="middle">
+                            <table class="right">
+                                <tr>
+                                    <td><span class="genmed">{L_USERNAME}:</span>&nbsp;</td>
+                                    <td><input class="post" type="text" size="10" name="username"/>&nbsp;</td>
+                                    <td>
+                                        <input class="radio" type="checkbox" name="autologin" {AUTOLOGIN_CHECKED} />
+                                        <span class="gensmall">{L_AUTO_LOGIN}</span>&nbsp;
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td><span class="genmed">{L_PASSWORD}:</span>&nbsp;</td>
+                                    <td><input class="post" type="password" size="10" name="password"/>&nbsp;</td>
+                                    <td>{S_HIDDEN_FIELDS}<input class="mainoption" type="submit" name="login" value="{L_LOGIN}" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="10%" align="center" valign="middle">
+                            <span class="genmed fb_or">{switch_user_login_form_footer.switch_fb_connect.L_OR}</span>
+                        </td>
+                        <td width="35%" class="align_gauche"><fb:login-button size="large" onlogin="window.location='/facebook_connect.forum'" v="2" scope="{switch_user_login_form_footer.switch_fb_connect.L_FB_PERMISSIONS}">{switch_user_login_form_footer.switch_fb_connect.L_FB_LOGIN_BUTTON}</fb:login-button></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- END switch_fb_connect -->
+</form>
 <!-- END switch_user_login_form_footer -->
 
-<br style="clear:both" />
+<!-- BEGIN disable_viewonline -->
+<table class="tborder" align="center" border="0" cellpadding="6" cellspacing="0" width="100%">
+<thead>
+    <tr>
+        <td class="tcat" colspan="2">≈Õ’«∆Ì«  «·„‰ œÏ</td>
+    </tr>
+</thead>
+<!-- logged-in users -->
+<tbody>
+    <tr>
+        <td class="thead" colspan="2">
+            <a style="float:left" href="#top" onclick="return toggle_collapse('forumhome_activeusers')"><img id="collapseimg_forumhome_activeusers" src="http://a7la.honor.es/dev1/images/collapse_thead.gif" alt="" border="0"></a>
+            <a href="{U_VIEWONLINE}">«·„ Ê«ÃœÊ‰ «·¬‰</a>: {TOTAL_USERS_ONLINE}
+        </td>
+    </tr>
+</tbody>
+<tbody id="collapseobj_forumhome_activeusers" style="">
+    <tr>
+        <td class="alt2"><a href="{U_VIEWONLINE}"><img title="„‘«Âœ… «·„ Ê«ÃœÊ‰ «·¬‰" src="http://a7la.honor.es/dev1/images/whos_online.gif" alt="„‘«Âœ… «·„ Ê«ÃœÊ‰ «·¬‰" border="0"></a></td>
+        <td class="alt1" width="100%">
+            <div class="smallfont">
+                <div style="white-space: nowrap">{RECORD_USERS}</div>
+                          <br />
+                <div>{LOGGED_IN_USER_LIST}</div>
+            </div>
+        </td>
+    </tr>
+</tbody>
+<!-- end logged-in users -->
 
-<!-- BEGIN switch_legend -->
-<div id="picture_legend">
-  <div class="pic_legend_icon">
-	  <div class="forum-status" style="background-image:url('{FORUM_NEW_IMG}');" title="{L_NEW_POSTS}"></div>
-    {L_NEW_POSTS}
-  </div>
 
-  <div class="pic_legend_icon">
-	  <div class="forum-status" style="background-image:url('{FORUM_IMG}');" title="{L_NO_NEW_POSTS}"></div>
-    {L_NO_NEW_POSTS}
-  </div>
+<tbody>
+    <tr>
+        <td class="thead" colspan="2">
+            <a style="float:left" href="#top" onclick="return toggle_collapse('forumhome_stats')"><img id="collapseimg_forumhome_stats" src="http://a7la.honor.es/dev1/images/collapse_thead.gif" alt="" border="0"></a>
+            ≈Õ’«∆Ì«  {L_INDEX}
+        </td>
+    </tr>
+</tbody>
+<tbody id="collapseobj_forumhome_stats" style="">
+    <tr>
+        <td class="alt2"><img title="≈Õ’«∆Ì«  {L_INDEX}" src="http://a7la.honor.es/dev1/images/stats.gif" alt="≈Õ’«∆Ì«  {L_INDEX}" border="0"></td>
+        <td class="alt1" width="100%">
+        <div class="smallfont">
+            <div>
+                {TOTAL_POSTS} ,
+                {TOTAL_USERS}
+                {NEWEST_USER}
+            </div>
+                       <br />
+            <div>
 
-  <div class="pic_legend_icon">
-	  <div class="forum-status" style="background-image:url('{FORUM_LOCKED_IMG}');" title="{L_FORUM_LOCKED}"></div>
-    {L_FORUM_LOCKED}
-  </div>
-</div>
-<!-- END switch_legend -->
+                          <b>
+                            <span style="display: block; margin: 0.5em 0 1.0em;">
+                              <b><span class="glow-super blink1" style="color: #FF0000;">«·≈œ«—ÌÌ‰</span></b>  ?
+                              <b><span style="color: #CC7700;">«·„‘—›Ì‰ «·⁄Ê«„</span></b>  ?
+                              <b><span style="color: #009933;">«·„—«ﬁ»Ì‰</span></b>  ?
+                              <b><span style="color: #FFB700;">ﬂ»«— «·‘Œ’Ì« </span></b>  ?
+                              <b><span style="color: #0033FF;">«·Œ»—«¡</span></b>  ?
+                              <b><span style="color: #0091FF;">«· „Ì¯“</span></b>  ?
+                              <b><span style="color: #25C2C7;">«·√⁄÷«¡ «·‰‘ÿ«¡</span></b>  ?
+                              <b><span style="color: #000000;">«·√⁄÷«¡</span></b>  ?
+                              <b><span style="color: #666362;">«·√⁄÷«¡ «·Ãœœ</span></b>
+                            </span>
+                          </b>
+                          <style>
+                            .blink1:hover {
+                            background: url("http://a7la.honor.es/dev1/images/blink1.gif") repeat scroll 0% 0% transparent;
+                            }
+                            .glow-super {
+                            color: #B80000;
+                            font-weight: bold;
+                            text-shadow: 2px 0px 11px #B80000;
+                            background: url("http://a7la.honor.es/dev1/images/backround21.gif") repeat scroll 0% 0% transparent;
+                            }
+                          </style>
+
+            </div>
+
+        </div>
+        </td>
+    </tr>
+</tbody>
+</table>
+<!-- END disable_viewonline -->
+<br>
+
+<table border="0" cellpadding="0" cellspacing="2" width="100%">
+<tbody><tr valign="bottom">
+    <td>
+        <table border="0" cellpadding="2" cellspacing="0">
+        <tbody><tr>
+            <td><img title="ÌÕ ÊÌ „‘«—ﬂ«  ÃœÌœ…" src="{FORUM_NEW_IMG}" alt="ÌÕ ÊÌ „‘«—ﬂ«  ÃœÌœ…" border="0"></td>
+            <td class="smallfont">&nbsp; ÌÕ ÊÌ „‘«—ﬂ«  ÃœÌœ…</td>
+        </tr>
+        <tr>
+            <td><img title="·« ÌÕ ÊÌ „‘«—ﬂ«  ÃœÌœ…" src="{FORUM_IMG}" alt="·« ÌÕ ÊÌ „‘«—ﬂ«  ÃœÌœ…" border="0"></td>
+            <td class="smallfont">&nbsp; ·« ÌÕ ÊÌ „‘«—ﬂ«  ÃœÌœ…</td>
+        </tr>
+        <tr>
+            <td><img title="„‰ œÏ „€·ﬁ" src="{FORUM_LOCKED_IMG}" alt="„‰ œÏ „€·ﬁ" border="0"></td>
+            <td class="smallfont">&nbsp; „‰ œÏ „€·ﬁ</td>
+        </tr>
+
+        </tbody></table>
+    </td>
+ <!-- BEGIN switch_user_logged_in -->
+<td align="left"><a rel="nofollow" href="{U_LOGIN_LOGOUT}" onclick="return log_out('Â· √‰  „ √ﬂœ »—€» ﬂ ›Ì «·Œ—ÊÃ „‰ «·„‰ œÏø')"> ”ÃÌ· {L_LOGIN_LOGOUT}</a></td>
+ <!-- END switch_user_logged_in -->
+</tr>
+</tbody></table>
+
+
+
 
 {AUTO_DST}
 
 <!-- BEGIN switch_fb_index_login -->
 <div id="fb-root"></div>
-<script>
-    FB.init({
-      appId      : {switch_fb_index_login.FACEBOOK_APP_ID},
-      cookie     : true,
-      xfbml      : true,
-      oauth      : true,
-      version    : 'v2.3'
-    });
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+<script type="text/javascript">
+//<![CDATA[
+FB.init({
+    appId: '{switch_fb_index_login.FACEBOOK_APP_ID}',
+ 	status: true,
+ 	cookie: true,
+ 	xfbml: true,
+    oauth: true
+});
+//]]>
 </script>
 <!-- END switch_fb_index_login -->

@@ -1,140 +1,117 @@
-<!-- BEGIN topics_list_box -->
-<!-- BEGIN row -->
-<!-- BEGIN header_table -->
-	<!-- BEGIN multi_selection -->
-		<script type="text/javascript">
+<!-- BEGIN pagination -->
+<div class="pagenav" align="left">
+<table class="tborder" border="0" cellpadding="3" cellspacing="0">
+    <tr>
+        <td class="thead" colspan="{topics_list_box.row.COLSPAN}" valign="middle">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>&nbsp;<span class="gensmall">{PAGINATION}</span></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</div>
+<!-- END pagination -->
 
-		function check_uncheck_main_{topics_list_box.row.header_table.BOX_ID}()
-		{
-			alert('MAIN');
+<table class="tborder" width="100%" align="center" border="0" cellpadding="6" cellspacing="1">
+<tbody>
+<tr>
+<td class="tcat">„Ê«÷Ì⁄ «·„‰ œÏ: {PAGE_TITLE}</td>
+</tr>
+</tbody>
+</table>
 
-			var all_checked = true;
+<!-- BEGIN topics_list_box --><!-- BEGIN row --><!-- BEGIN header_table --><!-- BEGIN multi_selection -->
+<script type="text/javascript">
+function check_uncheck_main_{topics_list_box.row.header_table.BOX_ID}() {
+    var all_checked = true;
+    for (i = 0; (i < document.{topics_list_box.FORMNAME}.elements.length) && all_checked; i++) {
+        if (document.{topics_list_box.FORMNAME}.elements[i].name == '{topics_list_box.FIELDNAME}[]{topics_list_box.row.header_table.BOX_ID}') {
+            all_checked = document.{topics_list_box.FORMNAME}.elements[i].checked;
+        }
+    }
+    document.{topics_list_box.FORMNAME}.all_mark_{topics_list_box.row.header_table.BOX_ID}.checked = all_checked;
+}
+function check_uncheck_all_{topics_list_box.row.header_table.BOX_ID}() {
+    for (i = 0; i < document.{topics_list_box.FORMNAME}.length; i++) {
+        if (document.{topics_list_box.FORMNAME}.elements[i].name == '{topics_list_box.FIELDNAME}[]{topics_list_box.row.header_table.BOX_ID}') {
+            document.{topics_list_box.FORMNAME}.elements[i].checked = document.{topics_list_box.FORMNAME}.all_mark_{topics_list_box.row.header_table.BOX_ID}.checked;
+        }
+    }
+}
+</script>
+<!-- END multi_selection -->
+<table class="tborder" id="threadslist" align="center" border="0" cellpadding="6" cellspacing="0" width="100%">
+<tbody>
+<tr>
+    <td class="thead" colspan="2">&nbsp;</td>
+    <td class="thead" width="100%">«·„Ê÷Ê⁄ / ﬂ« » «·„Ê÷Ê⁄</td>
+    <td class="thead" align="center" nowrap="nowrap" width="150"><span style="white-space:nowrap">¬Œ— „‘«—ﬂ…</span></td>
+    <td class="thead" align="center" nowrap="nowrap"><span style="white-space:nowrap">„‘«—ﬂ«  </span></td>
+    <td class="thead" align="center" nowrap="nowrap"><span style="white-space:nowrap">«·„‘«Âœ«  </span></td>
 
-			for (i = 0; (i < document.{topics_list_box.FORMNAME}.elements.length) && all_checked; i++)
-			{
-				if (document.{topics_list_box.FORMNAME}.elements[i].name == '{topics_list_box.FIELDNAME}[]{topics_list_box.row.header_table.BOX_ID}')
-				{
-					all_checked = document.{topics_list_box.FORMNAME}.elements[i].checked;
-				}
-			}
-
-			document.{topics_list_box.FORMNAME}.all_mark_{topics_list_box.row.header_table.BOX_ID}.checked = all_checked;
-		}
-
-		function check_uncheck_all_{topics_list_box.row.header_table.BOX_ID}()
-		{
-			alert('ALL');
-
-			for (i = 0; i < document.{topics_list_box.FORMNAME}.length; i++)
-			{
-				if (document.{topics_list_box.FORMNAME}.elements[i].name == '{topics_list_box.FIELDNAME}[]{topics_list_box.row.header_table.BOX_ID}')
-				{
-					document.{topics_list_box.FORMNAME}.elements[i].checked = document.{topics_list_box.FORMNAME}.all_mark_{topics_list_box.row.header_table.BOX_ID}.checked;
-				}
-			}
-		}
-
-		</script>
-	<!-- END multi_selection -->
-
-	<div class="forum-category topicslist announcement">
-	  <div class="title">
-		  <!-- BEGIN multi_selection -->
-			<input onclick="check_uncheck_all_{topics_list_box.row.header_table.BOX_ID}();" type="checkbox" name="all_mark_{topics_list_box.row.header_table.BOX_ID}" value="0" />
-			<!-- END multi_selection -->
-			{topics_list_box.row.L_TITLE}
-		</div>
-
-<!-- END header_table -->
-
-<!-- BEGIN header_row -->
-		<div class="title">{topics_list_box.row.L_TITLE}</div>
+<!-- BEGIN multi_selection -->
+        <th class="thead" align="center" nowrap="nowrap" width="20" ><input  onclick="check_uncheck_all_{topics_list_box.row.header_table.BOX_ID}();" type="checkbox" name="all_mark_{topics_list_box.row.header_table.BOX_ID}" value="0" /></th>
+    <!-- END multi_selection -->
+    </tr>
+    <!-- END header_table --><!-- BEGIN header_row -->
+    <tr>
+        <td class="thead" class="alt2" colspan="{topics_list_box.row.COLSPAN}"><span class="gensmall">&nbsp;<b>{topics_list_box.row.L_TITLE}</b></span></td>
+    </tr>
 <!-- END header_row -->
-
+</tbody>
+<tbody id="threadbits_forum_339">
 <!-- BEGIN topic -->
+{topics_list_box.row.END_TABLE_STICKY}
 
-	<!-- BEGIN table_sticky -->
-  </div>
-	<div class="forum-category topicslist">
-	  <div class="title">
-		<!-- BEGIN multi_selection -->
-		<input onclick="check_uncheck_all_{topics_list_box.row.header_table.BOX_ID}();" type="checkbox" name="all_mark_{topics_list_box.row.header_table.BOX_ID}" value="0" />
-		<!-- END multi_selection -->
-		{topics_list_box.row.topic.table_sticky.L_TITLE}
-	</div>
-	<!-- END table_sticky -->
-    <div class="forum-block color-primary">
-      <div class="forum-block-inner">
-      	<!-- BEGIN single_selection -->
-  			<span class="merge-box"><input type="radio" name="{topics_list_box.FIELDNAME}" value="{topics_list_box.row.FID}" {topics_list_box.row.L_SELECT} /></span>
-  			<!-- END single_selection -->
-
-        <div class="forum-status" title="{topics_list_box.row.L_TOPIC_FOLDER_ALT}" style="background-image:url('{topics_list_box.row.TOPIC_FOLDER_IMG}');">
+<tr>
+    <td class="alt1" id="td_threadstatusicon_548194">
+        <img src="{topics_list_box.row.TOPIC_FOLDER_IMG}" id="thread_statusicon_548194" alt="" border="" title="{topics_list_box.row.L_TOPIC_FOLDER_ALT}" />
+    </td>
+        <td class="alt2">{topics_list_box.row.ICON}</td>
+    <td class="alt1" id="td_threadtitle_548194" title="{topics_list_blog_box.topic.switch_description.TOPIC_DESCRIPTION}">
+        <div>
+                <span style="float:left">
+                     {topics_list_box.row.PARTICIPATE_POST_IMG}
+                </span>
+            <font><b>{topics_list_box.row.TOPIC_TYPE}</b></font>
+            <a href="{topics_list_box.row.U_VIEW_TOPIC}" id="thread_title_548194">{topics_list_box.row.TOPIC_TITLE}</a>
         </div>
-
-        <div class="forum-info" {topics_list_box.row.ICON}>
-        	<span class="newpost-img">{topics_list_box.row.NEWEST_POST_IMG}</span>
-  				<span class="participated">{topics_list_box.row.PARTICIPATE_POST_IMG}</span>
-  			  <span class="topic-type">{topics_list_box.row.TOPIC_TYPE}</span>
-          <h2 class="topic-title">
-            <a class="topictitle" href="{topics_list_box.row.U_VIEW_TOPIC}">{topics_list_box.row.TOPIC_TITLE}</a>
-          </h2>
-
-  				<!-- BEGIN switch_description -->
-  				<div class="topic-desc">{topics_list_box.row.topic.switch_description.TOPIC_DESCRIPTION}</div>
-  				<!-- END switch_description -->
-
-  			  <div class="topic-info">
-            {topics_list_box.row.GOTO_PAGE_NEW}
-  				  <span class="topic-author">{topics_list_box.row.L_BY} <strong>{topics_list_box.row.TOPIC_AUTHOR}</strong></span>
-  				  <!-- BEGIN nav_tree -->{topics_list_box.row.TOPIC_NAV_TREE_NEW}<!-- END nav_tree -->
-          </div>
-        </div>
-
-        <div class="forum-stats">
-
-          <div class="posts">
-            <span class="number">{topics_list_box.row.REPLIES}</span><br/>
-            <small>{L_REPLIES}</small>
-          </div>
-
-          <div class="views">
-            <span class="number">{topics_list_box.row.VIEWS}</span><br/>
-            <small>{L_VIEWS}</small>
-          </div>
+        <div class="smallfont">
+                <span style="cursor:pointer">{topics_list_box.row.TOPIC_AUTHOR}</span>
 
         </div>
-
-        <div class="forum-lastpost">
-          <!-- BEGIN avatar -->
-          <span class="lastpost-avatar">{topics_list_box.row.topic.avatar.LAST_POST_AVATAR}</span>
-          <div style="float:left;">
-          <!-- END avatar -->
-  				  <span>{topics_list_box.row.LAST_POST_AUTHOR}&nbsp;
-  			    {topics_list_box.row.LAST_POST_IMG}<br style="clear:left;" />{topics_list_box.row.LAST_POST_TIME}</span>
-          <!-- BEGIN avatar -->
-          </div>
-          <!-- END avatar -->
-
+    </td>
+    <td class="alt2" title="—œÊœ: {topics_list_box.row.REPLIES}, „‘«Âœ« : {topics_list_box.row.VIEWS}">
+        <div class="smallfont" style="text-align:left; white-space:nowrap">
+            <span class="time">{topics_list_box.row.LAST_POST_TIME}</span><br />
+            »Ê«”ÿ… {topics_list_box.row.LAST_POST_AUTHOR}  {topics_list_box.row.LAST_POST_IMG}
         </div>
-
-  			<!-- BEGIN multi_selection -->
-  			<input onclick="javascript:check_uncheck_main_{topics_list_box.row.BOX_ID}();" type="checkbox" name="{topics_list_box.FIELDNAME}[]{topics_list_box.row.BOX_ID}" value="{topics_list_box.row.FID}" {topics_list_box.row.L_SELECT} />
-  			<!-- END multi_selection -->
-
-        <div class="clear"></div>
-      </div>
-    </div>
+    </td>
+        <td class="alt1" align="center">{topics_list_box.row.REPLIES}</td>
+        <td class="alt2" align="center">{topics_list_box.row.VIEWS}</td>
+</tr>
 <!-- END topic -->
-<!-- BEGIN no_topics -->
-<div class="forum-block">
-  <strong>{topics_list_box.row.L_NO_TOPICS}</strong>
-</div>
-<!-- END no_topics -->
+</tbody>
 
-<!-- BEGIN bottom -->
-</div>
-<!-- END bottom -->
-<!-- BEGIN spacer --><br /><!-- END spacer -->
-<!-- END row -->
-<!-- END topics_list_box -->
+<!-- BEGIN no_topics -->
+<tr>
+<td class="row1" colspan="{topics_list_box.row.COLSPAN}" align="center" valign="middle" height="30"><span class="gen">{topics_list_box.row.L_NO_TOPICS}</span></td>
+</tr>
+<!-- END no_topics --><!-- BEGIN bottom -->
+
+<!-- END bottom --><!-- BEGIN footer_table -->
+</table>
+<!-- END bottom --><!-- BEGIN footer_table -->
+
+
+    <!-- END footer_table --><!-- BEGIN spacer --><br class="gensmall" /><!-- END spacer --><!-- END row --><!-- END topics_list_box -->
+
+<!-- BEGIN switch_image_resize -->
+<script type="text/javascript">
+//<![CDATA[
+$(resize_images({ 'selector' : '.blog_message', 'max_width' : {switch_image_resize.IMG_RESIZE_WIDTH}, 'max_height' : {switch_image_resize.IMG_RESIZE_HEIGHT} }));
+//]]>
+</script>
+<!-- END switch_image_resize -->
