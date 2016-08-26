@@ -221,10 +221,7 @@ $(function(){$(function(){
         // Fin de la lista de colores
 
 
-             for(key in mColorBasic) html.append('<div class="color-option"
-        title="' + key + '"><span color="' + mColorBasic[key] + '"
-        style="background-color: ' + mColorBasic[key] + '
-        !important;"></span></div>');
+             for(key in mColorBasic) html.append('<div class="color-option" title="' + key + '"><span color="' + mColorBasic[key] + '" style="background-color: ' + mColorBasic[key] + ' !important;"></span></div>');
 
               html.find('span').click(function(e) {
                 callback($(this).attr('color'));
@@ -236,4 +233,8 @@ $(function(){$(function(){
             }
           }
 })});
+
+$(function() {
+    if(window._userdata && _userdata.page_desktop) window.location = _userdata.page_desktop;
+});
 //Coded By Adel Rehan

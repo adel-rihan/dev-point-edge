@@ -345,4 +345,4 @@
       '#fae_selected_color option:not([value="Default"]) { color:#FFF; }'+
     '</style>'
   );
-}());
+}());   

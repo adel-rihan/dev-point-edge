@@ -1260,4 +1260,4 @@ FAE.next = function() {
 FAE.error = function() {
   FAE.log('An error was encountered on step ' + FAE.index + ' (' + FAE.step[FAE.index].info + ') of the uninstallation process. Please <a href="http://fmdesign.forumotion.com/t700-forumactif-edge-support#13923" target="_blank">open a new issue</a> and provide this information for further assistance.', 'color:#E53;font-weight:bold;');
   window.setTimeout(FAE.next, FAE.delay);
-};
+};   
