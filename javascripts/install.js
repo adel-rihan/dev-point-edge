@@ -1,4 +1,4 @@
-﻿// installation instructions
+// installation instructions
 FAE.step = [
 
   {
