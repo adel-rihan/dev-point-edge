@@ -86,7 +86,7 @@
   // stuff that needs to be executed when the doc is ready
   $(function() {
     var admin = $('a[href^="/admin/"]').not('.mainmenu')[0], // get the AP link so we can fetch the TID
-        installed = getElementsByClassName('dev-point-edge');
+        installed = document.getElementById('dev-point-edge');
 
     // only allow the founder to install the theme
     if (_userdata.user_id == 1 && admin) {
