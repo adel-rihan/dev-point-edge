@@ -7,41 +7,41 @@
 <table class="tborder" align="center" border="0" cellpadding="6" cellspacing="0" width="100%">
 <!-- BEGIN catrow --><!-- BEGIN tablehead -->
 <tbody>
-    <tr>
-        <td class="tcat" colspan="5" style="-webkit-border-radius: 5px;border-radius: 5px; ">
-            <table dir="rtl">
-    <tbody><tr>
-        <td><img alt="" src="http://a7la.honor.es/dev1/images/cat.png"></td>
-        <td><a href="/{catrow.tablehead.ID}-category" colspan="{catrow.tablehead.INC_SPAN}" nowrap="nowrap" width="100%" class="secondarytitle">{catrow.tablehead.L_FORUM}</a></td>
-        <td></td>
-    </tr>
+	<tr>
+		<td class="tcat" colspan="5" style="-webkit-border-radius: 5px;border-radius: 5px; ">
+			<table dir="rtl">
+	<tbody><tr>
+		<td><img alt="" src="http://a7la.honor.es/dev1/images/cat.png"></td>
+		<td><a href="/{catrow.tablehead.ID}-category" colspan="{catrow.tablehead.INC_SPAN}" nowrap="nowrap" width="100%" class="secondarytitle">{catrow.tablehead.L_FORUM}</a></td>
+		<td></td>
+	</tr>
 </tbody></table>
-        </td>
-    </tr>
+		</td>
+	</tr>
 </tbody>
-
-        <!-- END tablehead -->
-        <!-- BEGIN cathead -->
+  
+    <!-- END tablehead -->
+    <!-- BEGIN cathead -->
 <tbody id="collapseobj_forumbit_6" style="">
 
-        <!-- END cathead -->
-        <!-- BEGIN forumrow -->
+    <!-- END cathead -->
+    <!-- BEGIN forumrow -->
 
 
 <tr align="center">
-    <td class="alt2" width="60px;"><img style="border-radius:50%" src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="" id="forum_statusicon_308" border="0"></td>
-    <td class="alt1Active" id="f308" align="right" width="90%">
-        <div>
-            <a href="{catrow.forumrow.U_VIEWFORUM}"><strong><b>{catrow.forumrow.FORUM_NAME}</b></strong></a>
-        <!--	<span class="smallfont">(يشاهده 8 زائر)</span> -->
-        </div>
-        <div id="des_img_box" class="smallfont"><strong>{catrow.forumrow.FORUM_DESC}</strong></div>
-
-        <div class="smallfont" style="margin-top: 6px;"><span class="link-box"><b>
-                                    <ol class="subForumList" id="links_{catrow.forumrow.U_VIEWFORUM}">
-                                            {catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}
-                                    </ol>
-                                </b></span></div>
+	<td class="alt2" width="60px;"><img style="border-radius:50%" src="{catrow.forumrow.FORUM_FOLDER_IMG}" alt="" id="forum_statusicon_308" border="0"></td>
+	<td class="alt1Active" id="f308" align="right" width="90%">
+		<div>
+			<a href="{catrow.forumrow.U_VIEWFORUM}"><strong><b>{catrow.forumrow.FORUM_NAME}</b></strong></a>
+		<!--	<span class="smallfont">(يشاهده 8 زائر)</span> -->
+		</div>
+		<div id="des_img_box" class="smallfont"><strong>{catrow.forumrow.FORUM_DESC}</strong></div>
+		
+		<div class="smallfont" style="margin-top: 6px;"><span class="link-box"><b>
+                  <ol class="subForumList" id="links_{catrow.forumrow.U_VIEWFORUM}">
+                      {catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}
+                  </ol>
+                </b></span></div>
 
 <script>
 var str = document.getElementById('links_{catrow.forumrow.U_VIEWFORUM}').innerHTML;
@@ -58,11 +58,11 @@ document.getElementById('links_{catrow.forumrow.U_VIEWFORUM}').innerHTML += '<li
 </script>
 
 
-    </td>
-<td class="alt2" style="font-size: x-small"><div class="forumcounter threadcountbg hint--right" data-hint="المواضيع"><span class="fa"> ? </span> {catrow.forumrow.TOPICS}
+	</td>	
+<td class="alt2" style="font-size: x-small"><div class="forumcounter threadcountbg hint--right" data-hint="المواضيع"><span class="fa">  </span> {catrow.forumrow.TOPICS} 
 
 </div></td>
-<td class="alt2" style="font-size: x-small"><div class="forumcounter replycountbg hint--left" data-hint="الردود"><span class="fa"> ? </span> {catrow.forumrow.POSTS} </div></td>
+<td class="alt2" style="font-size: x-small"><div class="forumcounter replycountbg hint--left" data-hint="الردود"><span class="fa">  </span> {catrow.forumrow.POSTS} </div></td>
 <td id="lastpost" class="alt2">
 <table width="100%">
 <tbody>
@@ -86,15 +86,15 @@ document.getElementById('links_{catrow.forumrow.U_VIEWFORUM}').innerHTML += '<li
 </td>
 </tr>
 <!-- END forumrow -->
-        <!-- BEGIN catfoot -->
-        <tr>
-                <!-- BEGIN inc -->
-                <td class="{catrow.catfoot.inc.INC_CLASS}" width="46"><img src="{SPACER}" height="0" width="46" /></td>
-                <!-- END inc -->
-                <td class="spaceRow" colspan="{catrow.catfoot.INC_SPAN}" height="1"><img src="{SPACER}" alt="" height="1" width="1" /></td>
-        </tr>
-        <!-- END catfoot -->
-        <!-- BEGIN tablefoot -->
+    <!-- BEGIN catfoot -->
+    <tr>
+        <!-- BEGIN inc -->
+        <td class="{catrow.catfoot.inc.INC_CLASS}" width="46"><img src="{SPACER}" height="0" width="46" /></td>
+        <!-- END inc -->
+        <td class="spaceRow" colspan="{catrow.catfoot.INC_SPAN}" height="1"><img src="{SPACER}" alt="" height="1" width="1" /></td>
+    </tr>
+    <!-- END catfoot -->
+    <!-- BEGIN tablefoot -->
 
 </tbody>
 
