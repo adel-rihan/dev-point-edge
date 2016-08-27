@@ -943,7 +943,7 @@ FAE.step = [
   {
     info : 'Updating Toolbar Configuration',
     type : 'POST',
-     url : 'part=modules&sub=toolbar',
+     url : 'part=modules&sub=toolbar&extended_admin=1',
     data : {
       activate_toolbar : 1,
       fix_toolbar : 0,
@@ -955,7 +955,7 @@ FAE.step = [
   {
     info : 'Resynchronizing forum',
     type : 'POST',
-     url : 'mode=general&part=general&sub=general',
+     url : 'mode=general&part=general&sub=general&extended_admin=1',
     data : {
       resync : 'on',
       submit : 'Save'
