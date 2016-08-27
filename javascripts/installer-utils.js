@@ -262,17 +262,52 @@
                 form;
 
             // get the stylesheet
-            $.get(FAE.raw + 'css/style_sheet.css', function(d) {
-                val = d;
+            $.get('/admin/index.forum?mode=colors&part=themes&sub=logos&tid=' + FAE.tid, function(d) {
+              form = $('form[method="post"]', d)[0];
+
+              if (form) {
+                val = form.edit_code.value;
+
+                // update stylesheet with new FORUM WIDTH rule
+                if (/\/\*!FAE_WIDTH\*\/#page-body\{.*?\}/.test(form.edit_code.value)) {
+                  val = val.replace(/\/\*!FAE_WIDTH\*\/#page-body\{.*?\}/, width);
+                } else {
+                  val += '\n' + width;
+                }
+
+                // update stylesheet with new NAVBAR POSITION rule
+                if (/\/\*!FAE_NAV_DIR\*\/#navbar\{text-align:.*?\}/.test(form.edit_code.value)) {
+                  val = val.replace(/\/\*!FAE_NAV_DIR\*\/#navbar\{text-align:.*?\}/, nav_dir);
+                } else {
+                  val += '\n' + nav_dir;
+                }
+
+                // update stylesheet with new LOGO POSITION rule
+                if (/\/\*!FAE_LOGO_DIR\*\/#logo-desc\{text-align:.*?\}#logo\{float:.*?\}/.test(form.edit_code.value)) {
+                  val = val.replace(/\/\*!FAE_LOGO_DIR\*\/#logo-desc\{text-align:.*?\}#logo\{float:.*?\}/, logo_dir);
+                } else {
+                  val += '\n' + logo_dir;
+                }
+
+
+                // update stylesheet with new PROFILE POSITION rule
+                if (/\/\*!FAE_PROFIL_DIR\*\/\.postprofile\{float:.*?;.*?\}\.post-inner\{.*?\}/.test(form.edit_code.value)) {
+                  val = val.replace(/\/\*!FAE_PROFIL_DIR\*\/\.postprofile\{float:.*?;.*?\}\.post-inner\{.*?\}/, profil_dir);
+                } else {
+                  val += '\n' + profil_dir;
+                }
 
                 // update the stylesheet
                 $.post('/admin/index.forum?part=themes&sub=logos&mode=css&extended_admin=1&tid=' + FAE.tid, {
-                    edit_code : val,
-                    submit : 'Save'
+                  edit_code : val,
+                  submit : 'Save'
+
                 }, function(d) {
-                    FAE.log('General settings have been updated successfully !', 'font-weight:bold;color:#8B5;');
-                    FAE.log('Please <a href="javascript:window.location.reload();">click here</a> to reload the page.');
+                  FAE.log('General settings have been updated successfully !', 'font-weight:bold;color:#8B5;');
+                  FAE.log('Please <a href="javascript:window.location.reload();">click here</a> to reload the page.');
                 });
+
+              }
             });
 
             document.getElementById('fae_options').style.display = 'none';

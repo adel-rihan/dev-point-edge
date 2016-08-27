@@ -28,6 +28,26 @@ FAE.step = [
 
 
   {
+    info : 'Getting style_sheet.css',
+    type : 'GET',
+     url : FAE.raw + 'css/style_sheet.css',
+    func : function(d) {
+      FAE.step[FAE.index + 1].data.edit_code = d;
+    }
+  },
+
+
+  {
+    info : 'Installing style_sheet.css',
+    type : 'POST',
+     url : 'part=themes&sub=logos&mode=css&extended_admin=1',
+    data : {
+         submit : 'Submit'
+    }
+},
+
+
+  {
     info : 'Getting and deleting all JavaScript files to prevent installation errors',
     type : 'GET',
      url : '/admin/index.forum?mode=js&part=modules&sub=html&tid=' + FAE.tid,
