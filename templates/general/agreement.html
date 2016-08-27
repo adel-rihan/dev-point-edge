@@ -71,7 +71,7 @@
 <script type="text/javascript">
 function ischecked() {
 if ($('#cb_rules_agree').is(":checked")) {
-window.location.replace("{U_AGREE_OVER13}");
+window.location.href = '/register?agreed=true&step=2';
 } else {
 alert("لقد اخترت لا أقبل بشروط المنتدى, لذا لن تستطيع الاستمرار في التسجيل.");
 }
