@@ -1,4 +1,4 @@
-//Coded By Adel Rehan
+ï»¿//Coded By Adel Rehan
 $(function(){
     if (!$.sceditor) return;
     $.sceditor.defaultOptions.fonts += ',Tahoma';
@@ -60,7 +60,7 @@ $(function(){
 });
 (function() {
             var config = {
-                button_title : 'ÇáæÌæå ÇáÖÇÍßÉ',
+                button_title : 'Ø§Ù„ÙˆØ¬ÙˆÙ‡ Ø§Ù„Ø¶Ø§Ø­ÙƒØ©',
                 auto_close : false,
                 async_load : true,
 
