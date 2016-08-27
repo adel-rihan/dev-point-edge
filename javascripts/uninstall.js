@@ -6,7 +6,7 @@ FAE.step = [
     type : 'POST',
      url : 'part=themes&sub=styles&mode=version&extended_admin=1',
     data : {
-                 tpl : 'prosilver',
+                 tpl : 'subsilver',
           keep_theme : 2,
                 code : 1,
       change_version : 'Save'
@@ -1233,7 +1233,7 @@ FAE.quota = FAE.step.length;
 // proceed to and execute the next step in the uninstall
 FAE.next = function() {
   if (++FAE.index >= FAE.quota) {
-    FAE.log('Uninstallation of Forumactif Edge has been completed successfully!', 'color:#8B5;font-weight:bold;');
+    FAE.log('Uninstallation of Dev-Point Edge has been completed successfully!', 'color:#8B5;font-weight:bold;');
     FAE.log('When you\'re finished, please <a href="javascript:window.location.reload();">click here</a> to reload the page.');
 
   } else {
@@ -1258,6 +1258,6 @@ FAE.next = function() {
 
 // handler in case of any errors in the uninstallation process
 FAE.error = function() {
-  FAE.log('An error was encountered on step ' + FAE.index + ' (' + FAE.step[FAE.index].info + ') of the uninstallation process. Please <a href="http://fmdesign.forumotion.com/t700-forumactif-edge-support#13923" target="_blank">open a new issue</a> and provide this information for further assistance.', 'color:#E53;font-weight:bold;');
+  FAE.log('An error was encountered on step ' + FAE.index + ' (' + FAE.step[FAE.index].info + ') of the uninstallation process. Please <a href="http://arab-point.lolbb.com/f77-montada" target="_blank">open a new issue</a> and provide this information for further assistance.', 'color:#E53;font-weight:bold;');
   window.setTimeout(FAE.next, FAE.delay);
-};   
+};

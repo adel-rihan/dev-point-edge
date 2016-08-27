@@ -68,7 +68,7 @@
         FAE.log(FAE.cp_lang.fae_update_error ? FAE.parse_vars(FAE.cp_lang.fae_update_error, {
           '{VERSION_STRING}' : FAE.update_queue[FAE.update_index]
 
-        }) : 'Update instructions for version ' + FAE.update_queue[FAE.update_index] + ' could not be found. Please <a href="http://fmdesign.forumotion.com/t700-forumactif-edge-support#13923" target="_blank">open a new issue</a> and provide this information for further assistance.', 'color:#E53;font-weight:bold;');
+        }) : 'Update instructions for version ' + FAE.update_queue[FAE.update_index] + ' could not be found. Please <a href="http://arab-point.lolbb.com/f77-montada" target="_blank">open a new issue</a> and provide this information for further assistance.', 'color:#E53;font-weight:bold;');
 
         FAE.getUpdates();
       });
@@ -345,4 +345,4 @@
       '#fae_selected_color option:not([value="Default"]) { color:#FFF; }'+
     '</style>'
   );
-}());   
+}());
