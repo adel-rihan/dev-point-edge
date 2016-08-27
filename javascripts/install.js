@@ -943,15 +943,10 @@ FAE.step = [
   {
     info : 'Updating Toolbar Configuration',
     type : 'POST',
-     url : 'part=modules&sub=toolbar&extended_admin=1',
+     url : 'part=modules&sub=toolbar',
     data : {
       activate_toolbar : 1,
       fix_toolbar : 0,
-      toolbar_color : '#333333',
-      toolbar_text_color : '#FFFFFF',
-      toolbar_title : 'Ahlamontada',
-      toolbar_title_url : 'http://www.ahlamontada.com',
-      toolbar_logo : 'http://illiweb.com/fa/i/toolbar/pa0.png',
       submit : 'Save'
     }
   },
