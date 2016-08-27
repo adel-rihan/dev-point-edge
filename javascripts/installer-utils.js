@@ -86,7 +86,7 @@
   // stuff that needs to be executed when the doc is ready
   $(function() {
     var admin = $('a[href^="/admin/"]').not('.mainmenu')[0], // get the AP link so we can fetch the TID
-        installed = document.getElementById('fa_edge');
+        installed = getElementsByClassName('dev-point-edge');
 
     // only allow the founder to install the theme
     if (_userdata.user_id == 1 && admin) {
@@ -172,148 +172,12 @@
         };
 
 
-        // create and insert translation button
-        if (!FAE.board_lang) {
-          FAE.board_lang = 'English'; // set the board lang to English if it is undefined
-        }
-
         var opts = document.getElementById('fae_options'),
             actdiv = $('<div style="float:left;" />');
 
         $('#fae_install, #fae_uninstall, #fae_update').appendTo(actdiv);
         $(opts).prepend(actdiv);
 
-
-        // exclude from other hosts for testing
-        if (window.location.host == 'arab-point.lolbb.com') {
-
-          // greate and insert general settings
-          $(opts).append('<div class="fae_cp_title clear" style="margin-top:24px;">General Settings</div>'+
-
-            '<p id="fae_theme_desc">This section allows you to manage the general settings of Dev-Point Edge.</p>'+
-
-            '<div class="fae_cp_row">'+
-              '<span class="fae_help_me">?'+
-                '<span class="fae_help_tip">Drag the slider to adjust the width of the forum.</span>'+
-              '</span>'+
-              '<span id="fae_label_min" class="fae_label">Forum width : </span>'+
-              '<input id="fae_forum_width" type="range" min="30" max="100" value="99" style="vertical-align:middle;" /> <span id="fae_fw_percent">99%</span>'+
-            '</div>'+
-
-            '<div class="fae_cp_row">'+
-              '<span class="fae_help_me">?'+
-                '<span class="fae_help_tip">Position of the navbar links.</span>'+
-              '</span>'+
-              '<span id="fae_label_min" class="fae_label">Navbar position : </span>'+
-              '<label for="fae_nav_dir-left"><input type="radio" id="fae_nav_dir-left" name="fae_nav_dir" checked> Left</label>'+
-              '<label for="fae_nav_dir-center"><input type="radio" id="fae_nav_dir-center" name="fae_nav_dir"> Center</label>'+
-              '<label for="fae_nav_dir-right"><input type="radio" id="fae_nav_dir-right" name="fae_nav_dir"> Right</label>'+
-            '</div>'+
-
-            '<div class="fae_cp_row">'+
-              '<span class="fae_help_me">?'+
-                '<span class="fae_help_tip">Position of the forum logo.</span>'+
-              '</span>'+
-              '<span id="fae_label_min" class="fae_label">Logo position : </span>'+
-              '<label for="fae_logo_dir-left"><input type="radio" id="fae_logo_dir-left" name="fae_logo_dir" checked> Left</label>'+
-              '<label for="fae_logo_dir-center"><input type="radio" id="fae_logo_dir-center" name="fae_logo_dir"> Center</label>'+
-              '<label for="fae_logo_dir-right"><input type="radio" id="fae_logo_dir-right" name="fae_logo_dir"> Right</label>'+
-            '</div>'+
-
-            '<div class="fae_cp_row">'+
-              '<span class="fae_help_me">?'+
-                '<span class="fae_help_tip">Position of the post profile in topics.</span>'+
-              '</span>'+
-              '<span id="fae_label_min" class="fae_label">Profile position : </span>'+
-              '<label for="fae_profil_dir-left"><input type="radio" id="fae_profil_dir-left" name="fae_profil_dir" checked> Left</label>'+
-              '<label for="fae_profil_dir-right"><input type="radio" id="fae_profil_dir-right" name="fae_profil_dir"> Right</label>'+
-            '</div>'+
-
-            '<div class="fae_cp_row">'+
-              '<input id="fae_update_general" type="button" value="Save changes" />'+
-            '</div>'
-          );
-
-          // update the percentage counter
-          document.getElementById('fae_forum_width')[/trident/i.test(window.navigator.userAgent) ? 'onchange' : 'oninput'] = function() {
-            document.getElementById('fae_fw_percent').innerHTML = this.value + '%';
-          };
-
-
-          // update the general settings
-          document.getElementById('fae_update_general').onclick = function() {
-            FAE.log('Updating general settings..');
-
-            var width = +document.getElementById('fae_forum_width').value,
-
-                nav_dir = document.getElementById('fae_nav_dir-left').checked ? 'left' :
-                          document.getElementById('fae_nav_dir-center').checked ? 'center' :
-                          document.getElementById('fae_nav_dir-right').checked ? 'right' : 'left',
-
-                logo_dir = document.getElementById('fae_logo_dir-left').checked ? 'left' :
-                           document.getElementById('fae_logo_dir-center').checked ? 'center' :
-                           document.getElementById('fae_logo_dir-right').checked ? 'right' : 'left',
-
-                profil_dir = document.getElementById('fae_profil_dir-left').checked ? 'left' :
-                             document.getElementById('fae_profil_dir-right').checked ? 'right' : 'left',
-                profil_dir2 = profil_dir == 'left' ? 'right' : 'left',
-
-                val,
-                form;
-
-            // get the stylesheet
-            $.get('/admin/index.forum?mode=colors&part=themes&sub=logos&tid=' + FAE.tid, function(d) {
-              form = $('form[method="post"]', d)[0];
-
-              if (form) {
-                val = form.edit_code.value;
-
-                // update stylesheet with new FORUM WIDTH rule
-                if (/\/\*!FAE_WIDTH\*\/#page-body\{.*?\}/.test(form.edit_code.value)) {
-                  val = val.replace(/\/\*!FAE_WIDTH\*\/#page-body\{.*?\}/, width);
-                } else {
-                  val += '\n' + width;
-                }
-
-                // update stylesheet with new NAVBAR POSITION rule
-                if (/\/\*!FAE_NAV_DIR\*\/#navbar\{text-align:.*?\}/.test(form.edit_code.value)) {
-                  val = val.replace(/\/\*!FAE_NAV_DIR\*\/#navbar\{text-align:.*?\}/, nav_dir);
-                } else {
-                  val += '\n' + nav_dir;
-                }
-
-                // update stylesheet with new LOGO POSITION rule
-                if (/\/\*!FAE_LOGO_DIR\*\/#logo-desc\{text-align:.*?\}#logo\{float:.*?\}/.test(form.edit_code.value)) {
-                  val = val.replace(/\/\*!FAE_LOGO_DIR\*\/#logo-desc\{text-align:.*?\}#logo\{float:.*?\}/, logo_dir);
-                } else {
-                  val += '\n' + logo_dir;
-                }
-
-
-                // update stylesheet with new PROFILE POSITION rule
-                if (/\/\*!FAE_PROFIL_DIR\*\/\.postprofile\{float:.*?;.*?\}\.post-inner\{.*?\}/.test(form.edit_code.value)) {
-                  val = val.replace(/\/\*!FAE_PROFIL_DIR\*\/\.postprofile\{float:.*?;.*?\}\.post-inner\{.*?\}/, profil_dir);
-                } else {
-                  val += '\n' + profil_dir;
-                }
-
-                // update the stylesheet
-                $.post('/admin/index.forum?part=themes&sub=logos&mode=css&extended_admin=1&tid=' + FAE.tid, {
-                  edit_code : val,
-                  submit : 'Save'
-
-                }, function(d) {
-                  FAE.log('General settings have been updated successfully !', 'font-weight:bold;color:#8B5;');
-                  FAE.log('Please <a href="javascript:window.location.reload();">click here</a> to reload the page.');
-                });
-
-              }
-            });
-
-            document.getElementById('fae_options').style.display = 'none';
-          };
-
-        }
       }
 
     } else {
