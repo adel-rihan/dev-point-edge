@@ -9,7 +9,7 @@ FAE.step = [
                  tpl : 'subsilver',
           keep_theme : 2,
                 code : 1,
-      change_version : 'Save'
+      change_version : 'ÓÌøá'
     }
   },
 
@@ -22,7 +22,7 @@ FAE.step = [
       allow_css_perso : 0,
              css_base : 0,
          optimize_css : 0,
-      submit_base_css : 'Save'
+      submit_base_css : 'ÓÌøá'
     }
   },
 
@@ -77,7 +77,7 @@ FAE.step = [
      url : 'part=modules&sub=html&mode=js_delete&extended_admin=1',
     data : {
       allow_js_module : 1,
-          conf_submit : 'Save'
+          conf_submit : 'ÓÌøá'
     }
   },
 
@@ -99,7 +99,7 @@ FAE.step = [
     data : {
                  title : '[DP EDGE] ALL.JS',
       'js_placement[]' : 'allpages',
-                  mode : 'save',
+                  mode : 'ÓÌøá',
                 submit : 'Submit'
     }
   },
@@ -122,7 +122,7 @@ FAE.step = [
     data : {
                  title : '[DP EDGE] VERSION-DATA.JS',
       'js_placement[]' : 'allpages',
-                  mode : 'save',
+                  mode : 'ÓÌøá',
                 submit : 'Submit'
     }
   },
@@ -146,7 +146,7 @@ FAE.step = [
              t : 101,
              l : 'main',
       tpl_name : 'agreement',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -176,7 +176,7 @@ FAE.step = [
              t : 110,
              l : 'main',
       tpl_name : 'index_body',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -206,7 +206,7 @@ FAE.step = [
              t : 111,
              l : 'main',
       tpl_name : 'index_box',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -236,7 +236,7 @@ FAE.step = [
              t : 115,
              l : 'main',
       tpl_name : 'overall_footer_begin',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -266,7 +266,7 @@ FAE.step = [
              t : 133,
              l : 'main',
       tpl_name : 'overall_footer_end',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -296,7 +296,7 @@ FAE.step = [
              t : 116,
              l : 'main',
       tpl_name : 'overall_header',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -326,7 +326,7 @@ FAE.step = [
              t : 124,
              l : 'main',
       tpl_name : 'topics_list_box',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -356,7 +356,7 @@ FAE.step = [
              t : 125,
              l : 'main',
       tpl_name : 'viewforum_body',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -386,7 +386,7 @@ FAE.step = [
              t : 127,
              l : 'main',
       tpl_name : 'viewtopic_body',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -416,7 +416,7 @@ FAE.step = [
              t : 128,
              l : 'main',
       tpl_name : 'viewtopic_poll_ballot',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -446,7 +446,7 @@ FAE.step = [
              t : 129,
              l : 'main',
       tpl_name : 'viewtopic_poll_result',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -476,7 +476,7 @@ FAE.step = [
              t : 902,
              l : 'main',
       tpl_name : 'mod_news',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -506,7 +506,7 @@ FAE.step = [
              t : 904,
              l : 'main',
       tpl_name : 'mod_recent_topics',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -536,7 +536,7 @@ FAE.step = [
              t : 501,
              l : 'main',
       tpl_name : 'posting_body',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -566,7 +566,7 @@ FAE.step = [
              t : 504,
              l : 'main',
       tpl_name : 'posting_poll_body',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -596,7 +596,7 @@ FAE.step = [
              t : 511,
              l : 'main',
       tpl_name : 'privmsgs_body',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -626,7 +626,7 @@ FAE.step = [
              t : 512,
              l : 'main',
       tpl_name : 'privmsgs_popup',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -656,7 +656,7 @@ FAE.step = [
              t : 514,
              l : 'main',
       tpl_name : 'privmsgs_read_body',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -686,7 +686,7 @@ FAE.step = [
              t : 701,
              l : 'main',
       tpl_name : 'profile_add_body',
-        submit : 'Save'
+        submit : 'ÓÌøá'
     }
   },
 
@@ -704,7 +704,7 @@ FAE.step = [
       url : 'mode=main&part=themes&sub=templates',
      data : {
        switchTemplates : 2,
-                submit : 'Save'
+                submit : 'ÓÌøá'
      }
   },
 
@@ -744,7 +744,7 @@ FAE.step = [
       i_header_bg : FAE.eGIF,
       i_list_bg : FAE.eGIF,
       page : 'general',
-      submit : 'Save'
+      submit : 'ÓÌøá'
     }
   },
 
@@ -761,7 +761,7 @@ FAE.step = [
       i_folder_new_big : 'http://a7la.pe.hu/dev1/images/forum_new.gif',
       i_folder_locked_big : 'http://a7la.pe.hu/dev1/images/forum_lock.gif',
       page : 'forum',
-      submit : 'Save'
+      submit : 'ÓÌøá'
     }
   },
 
@@ -791,7 +791,7 @@ FAE.step = [
       i_topic_trashcan : FAE.eGIF,
       i_topic_unlock : FAE.eGIF,
       page : 'topics',
-      submit : 'Save'
+      submit : 'ÓÌøá'
     }
   },
 
@@ -825,7 +825,7 @@ FAE.step = [
       i_icon_mini_online : 'http://i86.servimg.com/u/f86/18/21/41/30/online10.png',
       i_icon_mini_offline : 'http://i86.servimg.com/u/f86/18/21/41/30/offlin10.png',
       page : 'icons',
-      submit : 'Save'
+      submit : 'ÓÌøá'
     }
   },
 
@@ -869,13 +869,13 @@ FAE.step = [
       i_msg_inbox : 'http://hitsk.in/t/17/34/39/i_msg_inbox.png',
       i_msg_sentbox : 'http://hitsk.in/t/17/34/39/i_msg_sentbox.png',
       i_msg_outbox : 'http://hitsk.in/t/17/34/39/i_msg_outbox.png',
-      i_msg_savebox : 'http://hitsk.in/t/17/34/39/i_msg_savebox.png',
+      i_msg_ÓÌøábox : 'http://hitsk.in/t/17/34/39/i_msg_ÓÌøábox.png',
       i_icon_ajax_edit : 'http://i86.servimg.com/u/f86/18/21/41/30/edit-f10.png',
       i_icon_ajax_valid : 'http://i86.servimg.com/u/f86/18/21/41/30/valid-10.png',
       i_icon_attachment_see : 'http://i86.servimg.com/u/f86/18/21/41/30/show-a10.png',
       i_icon_attachment_download : 'http://i86.servimg.com/u/f86/18/21/41/30/downlo10.png',
       page : 'buttons',
-      submit : 'Save'
+      submit : 'ÓÌøá'
     }
   },
 
@@ -898,7 +898,7 @@ FAE.step = [
       rating_star_empty : 'http://i86.servimg.com/u/f86/18/21/41/30/star-e10.png',
       icon_first_arrow : 'http://i86.servimg.com/u/f86/18/21/41/30/first-10.png',
       icon_last_arrow : 'http://i86.servimg.com/u/f86/18/21/41/30/last-f10.png',
-      submit : 'Save'
+      submit : 'ÓÌøá'
     }
   },
 
@@ -919,7 +919,7 @@ FAE.step = [
       menu_id : 0,
       mod_id : 1,
       sub_id : 1,
-      submit : 'Save'
+      submit : 'ÓÌøá'
     }
   },
 
@@ -935,7 +935,7 @@ FAE.step = [
       menu_position : 1,
       navbar_one_line : 1,
       mode : 'header',
-      submit : 'Save'
+      submit : 'ÓÌøá'
     }
   },
 
@@ -947,7 +947,7 @@ FAE.step = [
     data : {
       activate_toolbar : 1,
       fix_toolbar : 0,
-      submit : 'Save'
+      submit : 'ÓÌøá'
     }
   },
 
@@ -958,7 +958,7 @@ FAE.step = [
      url : 'mode=general&part=general&sub=general',
     data : {
       resync : 'on',
-      submit : 'Save'
+      submit : 'ÓÌøá'
     }
   }
 ];
