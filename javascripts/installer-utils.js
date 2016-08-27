@@ -185,7 +185,7 @@
 
 
         // exclude from other hosts for testing
-        if (window.location.host == 'arab-point.gid3an.com') {
+        if (window.location.host == 'arab-point.lolbb.com') {
 
           // greate and insert general settings
           $(opts).append('<div class="fae_cp_title clear" style="margin-top:24px;">General Settings</div>'+
@@ -261,30 +261,18 @@
                 val,
                 form;
 
-            // assign style rules to variables
-            width = '/*!FAE_WIDTH*/#page-body{width:' + width + '%;margin:0 auto;' + ( width >= 100 ? 'padding:0;' : '' ) + '}';
-            nav_dir = '/*!FAE_NAV_DIR*/#navbar{text-align:' + nav_dir + '}';
-            logo_dir = '/*!FAE_LOGO_DIR*/#logo-desc{text-align:' + logo_dir + '}#logo{float:' + ( logo_dir == 'center' ? 'none' : logo_dir ) + '}';
-            profil_dir = '/*!FAE_PROFIL_DIR*/.postprofile{float:' + profil_dir + ';margin-' + profil_dir + ':-300px;margin-' + profil_dir2 + ':0px}.post-inner{margin-' + profil_dir2 + ':0;margin-' + profil_dir + ':300px}';
-
             // get the stylesheet
-            $.get('/admin/index.forum?mode=colors&part=themes&sub=logos&tid=' + FAE.tid, function(d) {
-              form = $('form[method="post"]', d)[0];
-
-              if (form) {
-                val = form.edit_code.value;
+            $.get(FAE.raw + 'css/style_sheet.css', function(d) {
+                val = d;
 
                 // update the stylesheet
                 $.post('/admin/index.forum?part=themes&sub=logos&mode=css&extended_admin=1&tid=' + FAE.tid, {
-                  edit_code : val,
-                  submit : 'Save'
-
+                    edit_code : val,
+                    submit : 'Save'
                 }, function(d) {
-                  FAE.log('General settings have been updated successfully !', 'font-weight:bold;color:#8B5;');
-                  FAE.log('Please <a href="javascript:window.location.reload();">click here</a> to reload the page.');
+                    FAE.log('General settings have been updated successfully !', 'font-weight:bold;color:#8B5;');
+                    FAE.log('Please <a href="javascript:window.location.reload();">click here</a> to reload the page.');
                 });
-
-              }
             });
 
             document.getElementById('fae_options').style.display = 'none';
@@ -300,20 +288,4 @@
 
   // help link
   $('#fae_cp').append('<div style="margin-top:12px"><a href="https://github.com/adel759/dev-point-edge/wiki/FAE-Control-Panel-Guide" target="_blank" style="float:right;"><strong>Help!</strong></a><div class="clear"></div></div>');
-
-  // extra cp stylesheet
-  $('head').append(
-    '<style type="text/css">'+
-      '.fae_cp_row { margin:6px 0; }'+
-      '.fae_label { display:inline-block; width:200px; }'+
-      '.fae_help_me { color:#FFF; font-size:18px; background:#69C; border-radius:100%; text-align:center; vertical-align:middle; display:inline-block; height:24px; line-height:24px; width:24px; margin:auto 3px; position:relative; cursor:help; }'+
-      '.fae_help_tip { color:#333; font-size:12px; line-height:15px; background:#EEE; border:1px solid #CCC; border-radius:3px; display:inline-block; width:300px; padding:3px; position:absolute; visibility:hidden; z-index:1; }'+
-      '#fae_cp label { margin-right:10px; display:inline-block; }'+
-      '#fae_cp label input { vertical-align:text-bottom; }'+
-      '.fae_help_me:hover .fae_help_tip { visibility:visible; }'+
-      'body #fae_cp { color:#333; background:#F6F6F6; border:1px solid #CCC; margin:50px 25px; padding:12px; }'+
-      '#fae_cp select, #fae_cp input { color:#333; background:#FFF; }'+
-      '#fae_selected_color option:not([value="Default"]) { color:#FFF; }'+
-    '</style>'
-  );
 }());
