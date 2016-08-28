@@ -212,7 +212,11 @@ showHiddenMessage = function(id)
 <span id="friend_{postrow.displayed.COUNT_POSTS}"></span>
 <script>
 var username = $('#name_{postrow.displayed.COUNT_POSTS}').text();
+if (username == _userdata.username){
+$('#friend_{postrow.displayed.COUNT_POSTS}').remove();
+}else{
 $('#friend_{postrow.displayed.COUNT_POSTS}').html('<a rel="nofollow" class="edit_friends_link button hint--left hint--success" data-hint="أضافة" href="/profile?friend=' + username + '&mode=editprofile&page_profil=friendsfoes"><span class="fa">  </span></a>');
+}
 </script>
   <span class="name_topic"></span>
     </td>
@@ -537,7 +541,8 @@ $("#signature br:lt(2)").remove();
 
     <!-- BEGIN switch_image_resize -->
     <script type="text/javascript">
-    //<![CDATA[$(resize_images({
+    //<![CDATA[
+$(resize_images({
      'selector' : '.postbody', 'max_width' :
     {switch_image_resize.IMG_RESIZE_WIDTH}, 'max_height' :
     {switch_image_resize.IMG_RESIZE_HEIGHT} }));//]]></script>
