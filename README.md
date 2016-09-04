@@ -1,23 +1,23 @@
 # Dev-Point Edge
 
-What is "Dev-Point Edge" ? Dev-Point Edge ( or DP Edge, DPE ) is a new modern and responsive forum theme for [Forumotion](http://www.forumotion.com/) forums, that is like an entirely new forum version in itself. It comes ready with numerous plugins and best of all it's responsive, so you can browse on your mobile device without any problems !
+ما هو "Dev-Point Edge"؟ Dev-Point Edge ( أو DP Edge, DPE ) هو استايل حديث وسريع الاستجابه لـ [ أحلى المنتديات ] (http://www.forumotion.com/)، وكأنه نسخة منتدى جديده تماما في حد ذاته. ويأتي مع العديد من الإضافات وأفضل ما في مميزاته انه سريع الاستجابه، حتى تتمكن من التصفح دون أي مشاكل!
 
-What does Dev-Point Edge offer ?
+ماذا يقدم Dev-Point Edge؟
 
-- Smart automated control panel that assists you with installation and other tasks.
-- Advanced notification center.
-- Advanced upper bar.
-- and more...
+- لوحة تحكم ذكية تساعدك في تثبيت الاستايل وغيرها من المهام.
+- مركز الاشعارات متطور.
+- شريط علوي متطور.
+- و اكثر...
 
-Dev-Point Edge will constantly evolve because it's open source and managed by the community. That means we'll take feedback, suggestions, and reports from the community -- that's right, **your** voice can shape the future of this project ! If you'd like to install Dev-Point Edge on your Forumotion forum, please see the link below which includes detailed instructions on how to install the theme along with additional information on Dev-Point Edge that's constantly changing.
+الاستايل يتطور باستمرار لأنه مفتوح المصدر. وهذا يعني أننا سنأخذ ملاحظات والاقتراحات والتقارير من الاعضاء - هذا صحيح، ** صوتك ** يمكن أن يشكل مستقبل هذا المشروع! إذا كنت ترغب في تثبيت الاستايل فى منتداك الخاص بك، يرجى الاطلاع على الرابط أدناه والذي يتضمن تعليمات مفصلة حول كيفية تثبيت موضوع جنبا إلى جنب مع معلومات إضافية عن الاستايل تتغير باستمرار.
 
-- [**How to install Dev-Point Edge**](https://github.com/adel759/dev-point-edge/wiki/Installing)
+- [** كيفية تثبيت Dev-Point Edge **] (https://github.com/adel759/dev-point-edge/wiki/Installing)
 
-Not ready to install yet ? No problem ! Take a look around, check out the FAQ and previews below, or visit some links in the side panel to learn more about what Dev-Point Edge has to offer !
+غير جاهز لتثبيت الاستايل حتى الآن؟ ليس هناك أى مشكلة ! القي نظرة حوله، واطلع على الأسئلة الشائعة والمعاينه أدناه، أو قم بزيارة بعض الروابط في اللوحة الجانبية لمعرفة المزيد حول ما يقدمه Dev-Point Edge!
 
-## FAQ
+## التعليمات
 
-Do you have any questions or concerns about Dev-Point Edge ? If so, feel free to check out [our FAQ](https://github.com/adel759/dev-point-edge/wiki/Frequently-Asked-Questions) page or contact us on the [support forum](http://arab-point.lolbb.com/f77-montada) ! We're always ready to answer your questions ! :wink:
+هل لديك أي أسئلة أو استفسارات حول Dev-Point Edge؟ إذا كان الأمر كذلك، فلا تتردد في مراجعة صفحة [الاسئلة الشائعة وأجوبتها] (https://github.com/adel759/dev-point-edge/wiki/Frequently-Asked-Questions) أو الاتصال بنا على [منتدى الدعم] (HTTP: //arab-point.lolbb.com/f77-montada)! نحن دائما على استعداد للإجابة على أسئلتكم! :wink:
 
-## Preview
-You can find various previews of the theme below. [Click here](http://arab-point.lolbb.com/) if you'd like a live preview of Dev-Point Edge.
+## معاينة
+يمكنك العثور على معاينات مختلفة من الرابط أدناه. [اضغط هنا] (http://arab-point.lolbb.com/) إذا كنت ترغب معاينة حية لـ Dev-Point Edge.
