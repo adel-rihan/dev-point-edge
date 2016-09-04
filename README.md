@@ -20,4 +20,4 @@
 هل لديك أي أسئلة أو استفسارات حول Dev-Point Edge؟ إذا كان الأمر كذلك، فلا تتردد في مراجعة صفحة [الاسئلة الشائعة وأجوبتها] (https://github.com/adel759/dev-point-edge/wiki/Frequently-Asked-Questions) أو الاتصال بنا على [منتدى الدعم] (HTTP: //arab-point.lolbb.com/f77-montada)! نحن دائما على استعداد للإجابة على أسئلتكم! :wink:
 
 ## معاينة
-يمكنك العثور على معاينات مختلفة من الرابط أدناه. [اضغط هنا] (http://arab-point.lolbb.com/) إذا كنت ترغب معاينة حية لـ Dev-Point Edge.
+يمكنك العثور على معاينات مختلفة من الرابط أدناه. [اضغط هنا] (http://arab-point.lolbb.com/) إذا كنت ترغب معاينة حية لـ Dev-Point Edge.{:style="float: right;margin-right: 7px;margin-top: 7px;"}
