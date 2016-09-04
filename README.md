@@ -5,10 +5,8 @@ What is "Dev-Point Edge" ? Dev-Point Edge ( or DP Edge, DPE ) is a new modern an
 What does Dev-Point Edge offer ?
 
 - Smart automated control panel that assists you with installation and other tasks.
-- Dynamic theme selector so your members can browse in the color they prefer.
-- Side panels for widgets and quick navigation so your forum has maximum space and accessibility.
-- Automatic color coding of posts based on usergroup affiliation.
-- Built in counter for reputation votes.
+- Advanced notification center.
+- Advanced upper bar.
 - and more...
 
 Dev-Point Edge will constantly evolve because it's open source and managed by the community. That means we'll take feedback, suggestions, and reports from the community -- that's right, **your** voice can shape the future of this project ! If you'd like to install Dev-Point Edge on your Forumotion forum, please see the link below which includes detailed instructions on how to install the theme along with additional information on Dev-Point Edge that's constantly changing.
