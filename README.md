@@ -21,5 +21,3 @@
 
 ## معاينة
 يمكنك العثور على معاينات مختلفة من الرابط أدناه. [اضغط هنا] (http://arab-point.lolbb.com/) إذا كنت ترغب معاينة حية لـ Dev-Point Edge.
-
-![Some Title](http://placehold.it/image.jpeg){:style="float: right;margin-right: 7px;margin-top: 7px;"}
