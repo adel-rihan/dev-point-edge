@@ -29,7 +29,4 @@
 
 <p>يمكنك العثور على معاينات مختلفة من الرابط أدناه. <a href="http://arab-point.lolbb.com/">اضغط هنا</a> إذا كنت ترغب معاينة حية لـ Dev-Point Edge.</p>
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">dir</span>=<span class="pl-s"><span class="pl-pds">"</span>rtl<span class="pl-pds">"</span></span> <span class="pl-e">xml:lang</span>=<span class="pl-s"><span class="pl-pds">"</span>ar<span class="pl-pds">"</span></span> <span class="pl-e">lang</span>=<span class="pl-s"><span class="pl-pds">"</span>ar<span class="pl-pds">"</span></span>&gt;
-&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
-
 </div>
