@@ -715,6 +715,7 @@ FAE.step = [
      url : 'part=themes&sub=logos&mode=depart&page=general&mode=general&extended_admin=1',
     data : {
       i_logo : FAE.eGIF,
+      mobimod_logo : FAE.eGIF,
       i_background : FAE.eGIF,
       i_back_title : 'http://a7la.pe.hu/dev1/images/cat_head.png',
       i_back_catg : 'http://a7la.pe.hu/dev1/images/cat_head.png',
@@ -723,10 +724,9 @@ FAE.step = [
       i_voting_bar : 'http://illiweb.com/fa/invision/bar.gif',
       i_vote_rcap : 'http://illiweb.com/fa/invision/bar_right.gif',
       i_icon_mini_index : FAE.eGIF,
-      i_icon_mini_calendar : FAE.eGIF,
       i_icon_mini_gallery : FAE.eGIF,
-      i_icon_mini_portal : FAE.eGIF,
       i_icon_mini_faq : FAE.eGIF,
+      i_icon_mini_publication : FAE.eGIF,
       i_icon_mini_search : FAE.eGIF,
       i_icon_mini_members : FAE.eGIF,
       i_icon_mini_groups : FAE.eGIF,
@@ -737,12 +737,6 @@ FAE.step = [
       i_icon_mini_login : FAE.eGIF,
       i_icon_mini_logout : FAE.eGIF,
       i_whosonline : FAE.eGIF,
-      i_corners_left : FAE.eGIF,
-      i_corners_right : FAE.eGIF,
-      i_corners2_left : FAE.eGIF,
-      i_corners2_right : FAE.eGIF,
-      i_header_bg : FAE.eGIF,
-      i_list_bg : FAE.eGIF,
       page : 'general',
       submit : 'Save'
     }
@@ -911,14 +905,11 @@ FAE.step = [
       splited_categories : 4,
       last_topic_title : 1,
       last_topic_avatar : 1,
-      last_topic_title_length : 16,
+      last_topic_title_length : 32,
       sub_level_links : 2,
       moderators_links : 1,
       display_viewonline : 1,
       display_viewonline_bots : 1,
-      menu_id : 0,
-      mod_id : 1,
-      sub_id : 1,
       submit : 'Save'
     }
   },
@@ -945,7 +936,7 @@ FAE.step = [
     type : 'POST',
      url : 'part=modules&sub=toolbar&extended_admin=1',
     data : {
-      activate_toolbar : 1,
+      activate_toolbar : 0,
       fix_toolbar : 0,
       submit : 'Save'
     }
