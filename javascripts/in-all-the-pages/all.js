@@ -7,7 +7,9 @@ $(function(){
 });
 $(function(){
     $(function(){
-        $('<a class="sceditor-button sceditor-button-note" unselectable="on" title="Note"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.pe.hu/bbcodes/note.png)">Note</div></a>').insertBefore('.sceditor-button-headers').click(function(){
+        $('<div class="sceditor-group"><a class="sceditor-button sceditor-button-note" unselectable="on" title="Note"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.pe.hu/bbcodes/note.png)">Note</div></a></div>').insertBefore('.sceditor-group:last');
+
+        $('.sceditor-button-note').click(function(){
             $('#text_editor_textarea').sceditor("instance").insertText('<div class="note"><p>','</p></div>');
         });
 
