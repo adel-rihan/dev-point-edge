@@ -944,6 +944,24 @@ FAE.step = [
 
 
   {
+    info : 'Updating Messages and e-mails Configuration',
+    type : 'POST',
+     url : 'mode=email_mp&part=general&sub=messages',
+    data : {
+      topics_first_post : 0,
+      topics_recent_posts : 0,
+      allow_html : 1,
+      allow_bbcode : 1,
+      post_sig_separator : '',
+      sticky_separe : 1,
+      colors_palette : 0,
+      allow_quick_reply : 1,
+      submit : 'Save'
+    }
+  },
+
+
+  {
     info : 'Resynchronizing forum',
     type : 'POST',
      url : 'mode=general&part=general&sub=general&extended_admin=1',
