@@ -7,41 +7,41 @@ $(function(){
 });
 $(function(){
     $(function(){
-        $('<div class="sceditor-group"><a class="sceditor-button sceditor-button-note" unselectable="on" title="Note"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.honor.es/bbcodes/note.png)">Note</div></a></div>').insertBefore('.sceditor-group:last');
+        $('<div class="sceditor-group"><a class="sceditor-button sceditor-button-note" unselectable="on" title="Note"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.pe.hu/bbcodes/note.png)">Note</div></a></div>').insertBefore('.sceditor-group:last');
 
         $('.sceditor-button-note').click(function(){
             $('#text_editor_textarea').sceditor("instance").insertText("[NOTE]","[/NOTE]");
         });
 
-        $('<a class="sceditor-button sceditor-button-warning" unselectable="on" title="Warning"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.honor.es/bbcodes/warning.png)">Warning</div></a>').insertAfter('.sceditor-button-note').click(function(){
+        $('<a class="sceditor-button sceditor-button-warning" unselectable="on" title="Warning"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.pe.hu/bbcodes/warning.png)">Warning</div></a>').insertAfter('.sceditor-button-note').click(function(){
             $('#text_editor_textarea').sceditor("instance").insertText("[WARNING]","[/WARNING]");
         });
 
-        $('<a class="sceditor-button sceditor-button-information" unselectable="on" title="Information"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.honor.es/bbcodes/information.png)">Information</div></a>').insertAfter('.sceditor-button-warning').click(function(){
+        $('<a class="sceditor-button sceditor-button-information" unselectable="on" title="Information"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.pe.hu/bbcodes/information.png)">Information</div></a>').insertAfter('.sceditor-button-warning').click(function(){
             $('#text_editor_textarea').sceditor("instance").insertText("[INFO]","[/INFO]");
         });
 
-        $('<a class="sceditor-button sceditor-button-download" unselectable="on" title="Download"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.honor.es/bbcodes/download.png)">Download</div></a>').insertAfter('.sceditor-button-information').click(function(){
+        $('<a class="sceditor-button sceditor-button-download" unselectable="on" title="Download"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.pe.hu/bbcodes/download.png)">Download</div></a>').insertAfter('.sceditor-button-information').click(function(){
             $('#text_editor_textarea').sceditor("instance").insertText("[DOWNLOAD]","[/DOWNLOAD]");
         });
 
-        $('<a class="sceditor-button sceditor-button-new" unselectable="on" title="New"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.honor.es/bbcodes/new.png)">New</div></a>').insertAfter('.sceditor-button-download').click(function(){
+        $('<a class="sceditor-button sceditor-button-new" unselectable="on" title="New"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.pe.hu/bbcodes/new.png)">New</div></a>').insertAfter('.sceditor-button-download').click(function(){
             $('#text_editor_textarea').sceditor("instance").insertText("[NEW]","[/NEW]");
         });
 
-        $('<a class="sceditor-button sceditor-button-solved" unselectable="on" title="Solved"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.honor.es/bbcodes/solved.png)">Solved</div></a>').insertAfter('.sceditor-button-new').click(function(){
+        $('<a class="sceditor-button sceditor-button-solved" unselectable="on" title="Solved"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.pe.hu/bbcodes/solved.png)">Solved</div></a>').insertAfter('.sceditor-button-new').click(function(){
             $('#text_editor_textarea').sceditor("instance").insertText("[SOLVED]","[/SOLVED]");
         });
 
-        $('<a class="sceditor-button sceditor-button-hashtag" unselectable="on" title="Hashtag"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.honor.es/bbcodes/hashtag.png)">Hashtag</div></a>').insertAfter('.sceditor-button-solved').click(function(){
+        $('<a class="sceditor-button sceditor-button-hashtag" unselectable="on" title="Hashtag"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.pe.hu/bbcodes/hashtag.png)">Hashtag</div></a>').insertAfter('.sceditor-button-solved').click(function(){
             $('#text_editor_textarea').sceditor("instance").insertText("[HASHTAG]","[/HASHTAG]");
         });
 
-        $('<a class="sceditor-button sceditor-button-tagfriend" unselectable="on" title="Tag friend"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.honor.es/bbcodes/tag%20friend.png)">Tag friend</div></a>').insertAfter('.sceditor-button-hashtag').click(function(){
+        $('<a class="sceditor-button sceditor-button-tagfriend" unselectable="on" title="Tag friend"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.pe.hu/bbcodes/tag%20friend.png)">Tag friend</div></a>').insertAfter('.sceditor-button-hashtag').click(function(){
             $('#text_editor_textarea').sceditor("instance").insertText("[TAG]","[/TAG]");
         });
 
-        $('<a class="sceditor-button sceditor-button-blockquote" unselectable="on" title="Block Quote"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.honor.es/bbcodes/block%20quote.png)">Block Quote</div></a>').insertAfter('.sceditor-button-tagfriend').click(function(){
+        $('<a class="sceditor-button sceditor-button-blockquote" unselectable="on" title="Block Quote"><div unselectable="on" style="cursor: pointer!important;opacity:1!important;background-image:url(http://a7la.pe.hu/bbcodes/block%20quote.png)">Block Quote</div></a>').insertAfter('.sceditor-button-tagfriend').click(function(){
             $('#text_editor_textarea').sceditor("instance").insertText("[blockquote]","[/blockquote]");
         });
 
